@@ -5,7 +5,7 @@ from transformers import pipeline
 
 # 1-0.7 -> 1 mark, 0.7-0.33-> 0.5marks
 class ShortAnswerGrader:
-    def __init__(self,embed_model_name="BAAI/bge-small-en-v1.5",nli_model_name="roberta-large-mnli",threshold=0.7):
+    def __init__(self, embed_model_name="BAAI/bge-small-en-v1.5", nli_model_name="roberta-large-mnli", threshold=0.7):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
         self.embed_model = SentenceTransformer(embed_model_name, device=self.device)
@@ -22,7 +22,6 @@ class ShortAnswerGrader:
         self.entailment_weight = 0.2
 
         self.threshold = threshold
-
 
     def _normalize(self, text):
         return re.sub(r"\s+", " ", text.lower()).strip()
@@ -135,3 +134,95 @@ class ShortAnswerGrader:
                 "entailment_score": round(entailment_score, 3)
             }
         }
+
+
+def segment_short_answers(text):
+    if not text:
+        return []
+
+    answers = []
+    buffer = ''
+
+    for line in text.replace('\r', '\n').split('\n'):
+        trimmed = line.strip()
+        if not trimmed:
+            if buffer:
+                answers.append(buffer.strip())
+                buffer = ''
+            continue
+
+        if re.match(r'^\d+[.)]|^[a-zA-Z]\)', trimmed):
+            if buffer:
+                answers.append(buffer.strip())
+            buffer = re.sub(r'^\d+[.)]\s*', '', trimmed)
+            continue
+
+        buffer = f"{buffer} {trimmed}" if buffer else trimmed
+
+    if buffer:
+        answers.append(buffer.strip())
+
+    if not answers and text.strip():
+        answers.append(text.strip())
+
+    return [answer for answer in answers if answer]
+
+
+def _simple_tokens(text):
+    return re.findall(r'\b[a-z0-9]+\b', text.lower())
+
+
+def simple_similarity(student_answer, model_answer):
+    student_tokens = set(_simple_tokens(student_answer))
+    model_tokens = _simple_tokens(model_answer)
+
+    if not model_tokens:
+        return 1.0 if not student_tokens else 0.3
+
+    unique_model_tokens = set(model_tokens)
+    matched = sum(1 for token in unique_model_tokens if token in student_tokens)
+    coverage = matched / len(unique_model_tokens)
+    length_ratio = (
+        min(len(student_tokens), len(unique_model_tokens)) /
+        max(len(student_tokens), len(unique_model_tokens), 1)
+    )
+
+    similarity = min(1.0, coverage * 0.7 + length_ratio * 0.3)
+    return similarity
+
+
+def evaluate_sections(student_text, model_text):
+    student_text = student_text or ''
+    model_text = model_text or ''
+    student_sections = segment_short_answers(student_text)
+    model_sections = segment_short_answers(model_text)
+
+    if not student_sections:
+        student_sections = ['']
+    if not model_sections:
+        model_sections = ['']
+
+    per_question_scores = []
+    for idx, section in enumerate(student_sections):
+        reference = model_sections[idx] if idx < len(model_sections) else model_text
+        similarity = simple_similarity(section, reference)
+        per_question_scores.append({
+            'question_index': idx + 1,
+            'score': round(similarity * 100, 1),
+            'feedback': (
+                'Excellent alignment' if similarity >= 0.85 else
+                'Add more key points to match the model answer' if similarity >= 0.5 else
+                'Need to elaborate on the main concepts.'
+            )
+        })
+
+    total_score = (
+        sum(item['score'] for item in per_question_scores) / len(per_question_scores)
+        if per_question_scores else 0
+    )
+
+    return {
+        'total_score': round(total_score, 1),
+        'per_question_scores': per_question_scores,
+        'feedback': [item['feedback'] for item in per_question_scores],
+    }

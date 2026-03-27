@@ -1,0 +1,13 @@
+{
+  "name": "ml-short-answer-evaluator",
+  "version": "1.0.0",
+  "description": "Express API for short answer evaluation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

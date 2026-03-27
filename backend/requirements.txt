@@ -1,0 +1,11 @@
+flask==3.0.0
+flask-cors==4.0.0
+PyMuPDF==1.26.7
+pillow==10.1.0
+opencv-python==4.8.1.78
+requests==2.31.0
+werkzeug==3.0.1
+numpy==1.26.2
+
+# Optional: pdf2image (requires Poppler installation)
+# pdf2image==1.17.0
