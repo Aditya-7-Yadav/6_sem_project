@@ -7,5 +7,8 @@ requests==2.31.0
 werkzeug==3.0.1
 numpy==1.26.2
 
+sentence-transformers==2.2.2
+torch
+
 # Optional: pdf2image (requires Poppler installation)
 # pdf2image==1.17.0
