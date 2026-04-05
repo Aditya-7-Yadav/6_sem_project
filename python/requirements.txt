@@ -1,0 +1,10 @@
+torch
+sentence-transformers
+transformers
+pdf2image
+pillow
+opencv-python
+requests
+numpy
+flask
+flask-cors
