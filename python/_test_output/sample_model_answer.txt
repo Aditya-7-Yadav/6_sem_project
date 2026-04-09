@@ -1,0 +1,8 @@
+Q1 [2 marks]
+An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. Examples include Windows, Linux, and macOS.
+
+Q2 [5 marks]
+Process scheduling is the activity of the process manager that handles the removal of the running process from the CPU and the selection of another process based on a particular strategy. There are three types: Long-term, Short-term, and Medium-term scheduling. The short-term scheduler selects from ready queue, while long-term scheduler selects from job pool. Key algorithms include FCFS, SJF, Round Robin, and Priority scheduling.
+
+Q3 [3 marks]
+A process state diagram shows the lifecycle of a process. States include: New (process being created), Ready (waiting in ready queue), Running (executing on CPU), Waiting/Blocked (waiting for I/O), and Terminated (execution finished). Transitions occur based on scheduling decisions, I/O requests, and interrupts.

@@ -5,8 +5,8 @@ const fs = require('fs');
 const PYTHON_DIR = path.join(__dirname, '..', '..', 'python');
 const PYTHON_PATH = process.env.PYTHON_PATH || 'python';
 
-// Timeout for OCR process (3 minutes — PDFs with many pages take time)
-const OCR_TIMEOUT_MS = 180_000;
+// Timeout for OCR process (5 minutes — hybrid pipeline with Gemini takes longer)
+const OCR_TIMEOUT_MS = 300_000;
 // Timeout for grader process
 // 5 minutes — models take time to load on first request
 const GRADER_TIMEOUT_MS = 300_000;
@@ -28,7 +28,8 @@ function normalizePath(filePath) {
  */
 function runOCR(inputPath, outputDir) {
   return new Promise((resolve, reject) => {
-    const scriptPath = path.join(PYTHON_DIR, 'ocr_service.py');
+    // Use enhanced pipeline (falls back to OCR-only if Gemini unavailable)
+    const scriptPath = path.join(PYTHON_DIR, 'ocr', 'enhanced_ocr_pipeline.py');
     const normalizedInput = normalizePath(inputPath);
     const normalizedOutput = normalizePath(outputDir);
 

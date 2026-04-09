@@ -1,0 +1,43 @@
+{
+  "full_text": "UNIVERSITY EXAMINATION\nName: Rahul Sharma\nRoll Number: 21CSE045\nDate: 15/03/2025\nBranch: Computer Science (SE)\nSubject Code: CS-401\nQ1. What is an operating system?\nAns: An operating system is system software that\nmanages computer hardware, software resources, and\nprovides common services for computer programs.\nQ2. Explain process scheduling.\nAns: Process scheduling is the activity of the\nprocess manager that handles the removal of the\nrunning process from the CPU and the selection\nof another process based on a scheduling algorithm.\nQ3. Draw a process state diagram:\nReady\nRunning\nWaiting",
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "UNIVERSITY EXAMINATION\nName: Rahul Sharma\nRoll Number: 21CSE045\nDate: 15/03/2025\nBranch: Computer Science (SE)\nSubject Code: CS-401\nQ1. What is an operating system?\nAns: An operating system is system software that\nmanages computer hardware, software resources, and\nprovides common services for computer programs.\nQ2. Explain process scheduling.\nAns: Process scheduling is the activity of the\nprocess manager that handles the removal of the\nrunning process from the CPU and the selection\nof another process based on a scheduling algorithm.\nQ3. Draw a process state diagram:\nReady\nRunning\nWaiting"
+    }
+  ],
+  "structured_answers": [
+    {
+      "question_number": "1",
+      "subtype": "",
+      "question_text": "",
+      "answer_text": "What is an operating system?\nAns: An operating system is system software that\nmanages computer hardware, software resources, and\nprovides common services for computer programs."
+    },
+    {
+      "question_number": "2",
+      "subtype": "",
+      "question_text": "",
+      "answer_text": "Explain process scheduling.\nAns: Process scheduling is the activity of the\nprocess manager that handles the removal of the\nrunning process from the CPU and the selection\nof another process based on a scheduling algorithm."
+    },
+    {
+      "question_number": "3",
+      "subtype": "",
+      "question_text": "",
+      "answer_text": "Draw a process state diagram:\nReady\nRunning\nWaiting"
+    }
+  ],
+  "student_info": {
+    "name": "",
+    "roll_number": "",
+    "exam_date": "",
+    "branch": "",
+    "paper_code": ""
+  },
+  "content_analysis": [
+    {
+      "page_number": 1,
+      "content_blocks": []
+    }
+  ],
+  "pipeline_mode": "hybrid"
+}

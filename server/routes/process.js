@@ -29,7 +29,8 @@ function normalizeQuestionNumber(qnum) {
 
 /**
  * Match student answers to model answers by question number.
- * Handles out-of-sequence answers and various naming formats.
+ * Handles out-of-sequence answers, sub-questions (e.g., Q1(a), Q1(b)),
+ * and the common case where OCR treats the entire paper as a single Q1.
  * Returns an array of matched pairs ready for grading.
  */
 function matchAnswers(studentAnswers, modelAnswers) {
@@ -38,18 +39,39 @@ function matchAnswers(studentAnswers, modelAnswers) {
   console.log('[Match] Student answers:', studentAnswers.map(sa => `Q${sa.questionNumber}`).join(', '));
   console.log('[Match] Model answers:', modelAnswers.map(ma => `Q${ma.questionNumber}`).join(', '));
 
-  for (const model of modelAnswers) {
+  // Build a lookup of student answers by normalized question number
+  const studentLookup = {};
+  for (const sa of studentAnswers) {
+    const key = normalizeQuestionNumber(sa.questionNumber);
+    studentLookup[key] = sa;
+  }
+
+  // Track how many model questions had no direct match
+  let unmatchedCount = 0;
+  const unmatchedIndices = [];
+
+  for (let i = 0; i < modelAnswers.length; i++) {
+    const model = modelAnswers[i];
     const modelQNum = normalizeQuestionNumber(model.questionNumber);
 
-    const studentMatch = studentAnswers.find(sa => {
-      const studentQNum = normalizeQuestionNumber(sa.questionNumber);
-      return studentQNum === modelQNum;
-    });
+    // Try exact match first
+    let studentMatch = studentLookup[modelQNum];
+
+    // If no exact match, try matching by base number
+    // e.g., model has "1(a)" → try matching student's "1"
+    if (!studentMatch) {
+      const baseNum = modelQNum.replace(/[\(\)a-z]/g, '').trim();
+      if (baseNum && studentLookup[baseNum]) {
+        studentMatch = studentLookup[baseNum];
+      }
+    }
 
     if (studentMatch) {
       console.log(`[Match] Q${modelQNum}: matched (${studentMatch.answerText.length} chars)`);
     } else {
       console.log(`[Match] Q${modelQNum}: no student answer found`);
+      unmatchedCount++;
+      unmatchedIndices.push(i);
     }
 
     matched.push({
@@ -57,12 +79,33 @@ function matchAnswers(studentAnswers, modelAnswers) {
       studentAnswer: studentMatch ? studentMatch.answerText : '',
       modelAnswer: model.modelAnswer,
       maxMarks: model.maxMarks,
-      type: model.type // 'short' (<3 marks) or 'long' (>=3 marks)
+      type: model.type
     });
+  }
+
+  // SMART FALLBACK: If most model questions have no match, but we have full text
+  // from a single Q1 blob (common with handwritten papers), distribute
+  // the full text proportionally among all model questions.
+  const totalModelQs = modelAnswers.length;
+  if (unmatchedCount > 0 && studentAnswers.length === 1 && totalModelQs > 1) {
+    const fullText = studentAnswers[0].answerText || '';
+
+    if (fullText.length > 100) {
+      console.log(`[Match] SMART FALLBACK: OCR returned single blob (${fullText.length} chars) for ${totalModelQs} model questions`);
+      console.log(`[Match] Distributing full text to all ${totalModelQs} questions for grading`);
+
+      // Give the full text to every unmatched question —
+      // the grader will compare against each model answer and score accordingly.
+      // This is better than 0/0 since the grader uses semantic similarity.
+      for (const idx of unmatchedIndices) {
+        matched[idx].studentAnswer = fullText;
+      }
+    }
   }
 
   return matched;
 }
+
 
 /**
  * Generate feedback based on grading details

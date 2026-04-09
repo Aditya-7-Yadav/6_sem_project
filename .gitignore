@@ -1,6 +1,9 @@
 node_modules/
 uploads/
 .env
+*.env
+!.env.example
+python/.env
 *.pyc
 __pycache__/
 dist/
