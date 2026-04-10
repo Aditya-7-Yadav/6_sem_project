@@ -1,0 +1,1261 @@
+{
+  "segments": {
+    "segments": {
+      "1(a)": {
+        "text": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "1(a)"
+      },
+      "1(b)": {
+        "text": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "1(b)"
+      },
+      "2(a)": {
+        "text": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "2(a)"
+      },
+      "2(b)": {
+        "text": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "2(b)"
+      },
+      "c": {
+        "text": "",
+        "confidence": 0.0,
+        "source": "existing_ocr",
+        "matched_from": null
+      },
+      "3(a)": {
+        "text": "Taking K=5, taking instances 3, 6,5, 4 and 8\n5\n= Σ\nF(i) = 2.9+2.7+3.5+2.3+ 3.8 = 15.2= 3.04\nET\nK\n5\nb)\nx, = 1.0 , x2= - 2, x3=3\nw, = 0.2, w2 =-0.5, w3=0.7, b =0.4\nnet = w1.x, + w2. x2 + W3.x3 + b\n= (0.2) (1) + (-0.5) (-2) + (0.7) (3) + 0.4\n= 0.2+ 1+ 2.1+0.4\nnet = 3.7\nUnipolar sigmoid function = 1\n1+ e-net\n=\n=1\n1+e -3.7\n1+ 0.02\n. =",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "3(a)"
+      },
+      "b": {
+        "text": "",
+        "confidence": 0.0,
+        "source": "existing_ocr",
+        "matched_from": null
+      },
+      "1": {
+        "text": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "1"
+      },
+      "2": {
+        "text": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "2"
+      },
+      "3": {
+        "text": "Taking K=5, taking instances 3, 6,5, 4 and 8\n5\n= Σ\nF(i) = 2.9+2.7+3.5+2.3+ 3.8 = 15.2= 3.04\nET\nK\n5\nb)\nx, = 1.0 , x2= - 2, x3=3\nw, = 0.2, w2 =-0.5, w3=0.7, b =0.4\nnet = w1.x, + w2. x2 + W3.x3 + b\n= (0.2) (1) + (-0.5) (-2) + (0.7) (3) + 0.4\n= 0.2+ 1+ 2.1+0.4\nnet = 3.7\nUnipolar sigmoid function = 1\n1+ e-net\n=\n=1\n1+e -3.7\n1+ 0.02\n. =",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "3"
+      },
+      "i": {
+        "text": "",
+        "confidence": 0.0,
+        "source": "existing_ocr",
+        "matched_from": null
+      },
+      "ii": {
+        "text": "",
+        "confidence": 0.0,
+        "source": "existing_ocr",
+        "matched_from": null
+      },
+      "iii": {
+        "text": "",
+        "confidence": 0.0,
+        "source": "existing_ocr",
+        "matched_from": null
+      }
+    },
+    "unmatched_text": "",
+    "strategy_used": "existing_ocr"
+  },
+  "alignment": {
+    "aligned_pairs": [
+      {
+        "question_number": "1(a)",
+        "student_text": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+        "model_text": "MotoCorp is a manufacturing firm where managers emphasize authority, close supervision, and strict discipline. Employees enjoy job security but report low motivation and lack of creativity. Based on the scenario, answer the following questions:\ni. Identify and define the OB model MotoCorp is following. (1 mark)\nMotoCorp is following the Custodial Model of Organizational Behaviour. This model is based on the economic resources of the organization, where employees' needs for security and welfare are fulfilled. Managers focus on providing job security and benefits, which results in employees' dependence on the organization rather than on managerial authority alone.\nii. What are the advantages and disadvantages of this model? (1 mark)\nAdvantages:\nProvides job security and stable employment.\nCreates a sense of loyalty and dependence on the organization.\nReduces resistance to authority, as employees feel secure.\nDisadvantages:\nEmployees may feel passive and dependent, leading to low motivation and creativity.\nLack of challenge and empowerment can reduce innovation and initiative.\nProductivity may remain at a mediocre level.\niii. Suggest a shift to a more suitable OB model and justify your choice. (1 mark)\nMotoCorp should shift to the Supportive Model.\nThis model emphasizes leadership, motivation, and participation, rather than just authority or security.\nIt encourages employee involvement, creativity, and job satisfaction.\nBy empowering employees and valuing their contributions, the organization can move from passive cooperation to active engagement and higher productivity.",
+        "model_keywords": [
+          "MotoCorp",
+          "Custodial Model",
+          "Organizational Behaviour",
+          "economic resources",
+          "job security",
+          "benefits",
+          "employee dependence",
+          "managerial authority",
+          "Supportive Model",
+          "leadership",
+          "motivation",
+          "participation",
+          "employee involvement",
+          "creativity",
+          "job satisfaction"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.573,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.41,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "1(b)",
+        "student_text": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+        "model_text": "Define Organizational Behaviour. Explain the scope of Organizational Behaviour with example.\nDefinition: Organizational Behaviour is a field of study that investigates the impact that individuals, groups, and structure have on behaviour within organizations, for the purpose of applying such knowledge toward improving an organization's effectiveness.\nScope:\nIndividual Behaviour: Focuses on personality, perception, learning, values, attitudes, and motivation of employees.\nExample: Understanding why one employee is highly motivated while another shows apathy.\nGroup Behaviour: Studies group dynamics, leadership, teamwork, communication, conflict, and decision-making.\nExample: How team spirit and effective communication improve performance in a project team.\nOrganizational System: Examines the structure, culture, power, politics, and overall processes of the organization.\nExample: A flat organizational structure encouraging innovation versus a hierarchical structure emphasizing discipline.\nOrganizational Change and Development: Deals with managing change, stress, innovation, and organizational development programs.\nExample: Training employees to adapt to digital transformation initiatives.",
+        "model_keywords": [
+          "Organizational Behaviour",
+          "individuals",
+          "groups",
+          "structure",
+          "effectiveness",
+          "Individual Behaviour",
+          "Group Behaviour",
+          "Organizational System",
+          "Organizational Change",
+          "Development",
+          "motivation",
+          "leadership",
+          "communication",
+          "culture",
+          "innovation"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.599,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.495,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "2(a)",
+        "student_text": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+        "model_text": "Represent Maslow's Hierarchy of Needs with a detailed pyramid diagram.",
+        "model_keywords": [
+          "Maslow's Hierarchy of Needs",
+          "pyramid",
+          "Self-Actualization",
+          "Esteem",
+          "Love & Belonging",
+          "Safety Needs",
+          "Physiological Needs",
+          "Creativity",
+          "Personal Growth",
+          "Moral Development",
+          "Self Respect",
+          "Confidence",
+          "Family",
+          "Friendship",
+          "Personal Security"
+        ],
+        "content_types": [
+          "diagram"
+        ],
+        "max_marks": 2,
+        "answer_type": "short",
+        "alignment_confidence": 0.596,
+        "alignment_source": "existing_ocr",
+        "diagram_data": {
+          "description": "The diagram is a pyramid representing Maslow's Hierarchy of Needs. The pyramid is divided into five levels, starting from Physiological Needs at the base and ascending to Self-Actualization at the top.",
+          "elements": [
+            "Physiological Needs",
+            "Safety Needs",
+            "Love & Belonging",
+            "Esteem",
+            "Self-Actualization"
+          ],
+          "connections": []
+        },
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.487,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "2(b)",
+        "student_text": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+        "model_text": "Briefly explain the three components of attitude?\nAttitude is a learned predisposition to respond positively or negatively toward a person, object, or situation. It has three components:\nCognitive Component: Refers to the beliefs, thoughts, or knowledge a person has about something.\nExample: \"Working in a team increases productivity.\"\nAffective Component: Refers to the emotions or feelings a person has toward something.\nExample: Feeling happy and motivated when assigned a challenging project.\nBehavioural Component: Refers to the intent to act or observable actions based on beliefs and feelings.",
+        "model_keywords": [
+          "attitude",
+          "predisposition",
+          "Cognitive Component",
+          "beliefs",
+          "thoughts",
+          "knowledge",
+          "Affective Component",
+          "emotions",
+          "feelings",
+          "Behavioural Component",
+          "intent",
+          "observable actions",
+          "productivity",
+          "motivation"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.619,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.564,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "c",
+        "student_text": "",
+        "model_text": "Imagine you are a manager of a manufacturing team. Half your employees constantly look for guidance, while the other half show initiative and creativity.\n\nQuestions:\n\ni. If you apply only Theory X to the whole team, what will happen? (1 mark)\nTheory X assumes employees are lazy, need constant supervision, and avoid responsibility. Applying it to the entire team would demotivate the self-motivated, creative employees, stifle initiative, and reduce overall productivity.\n\nii. If you apply only Theory Y, what risks might occur? (1 mark)\nTheory Y assumes employees are self-motivated, responsible, and enjoy work. Applying it to the dependent employees who require guidance may lead to confusion, mistakes, and lack of discipline, as they may struggle without clear supervision.\n\niii. As manager, how will you balance your leadership style between Theory X and Y? (1 mark)\nUse an adaptive approach:\nApply Theory X management (close supervision, clear instructions) to employees who need guidance.\nApply Theory Y management (delegation, empowerment, encouragement of creativity) to self-motivated employees.\nThis approach maximizes productivity while maintaining motivation and creativity across the team.",
+        "model_keywords": [
+          "Theory X",
+          "Theory Y",
+          "leadership style",
+          "adaptive approach",
+          "motivation",
+          "productivity",
+          "delegation",
+          "empowerment",
+          "supervision",
+          "initiative",
+          "creativity",
+          "self-motivated",
+          "guidance"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.0,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": null,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.0
+        }
+      },
+      {
+        "question_number": "3(a)",
+        "student_text": "Taking K=5, taking instances 3, 6,5, 4 and 8\n5\n= Σ\nF(i) = 2.9+2.7+3.5+2.3+ 3.8 = 15.2= 3.04\nET\nK\n5\nb)\nx, = 1.0 , x2= - 2, x3=3\nw, = 0.2, w2 =-0.5, w3=0.7, b =0.4\nnet = w1.x, + w2. x2 + W3.x3 + b\n= (0.2) (1) + (-0.5) (-2) + (0.7) (3) + 0.4\n= 0.2+ 1+ 2.1+0.4\nnet = 3.7\nUnipolar sigmoid function = 1\n1+ e-net\n=\n=1\n1+e -3.7\n1+ 0.02\n. =",
+        "model_text": "Suggest four organizational practices that can help employees with low self-esteem gain confidence.\nTraining and Skill Development: Provide workshops, on-the-job training, and mentorship programs to help employees gain competence and feel capable.\nPositive Feedback and Recognition: Regularly acknowledge achievements, effort, and improvement to reinforce self-worth.\nAssigning Challenging but Achievable Tasks: Gradually increasing responsibility helps employees experience success and build confidence.\nEncouraging Participation in Decision-Making: Involve employees in team discussions and decisions to make them feel valued and capable.\nMentoring and Coaching: Pair employees with experienced mentors who can guide, encourage, and provide constructive feedback.\nCreating a Supportive Work Environment: Promote open communication, collaboration, and psychological safety, so employees feel comfortable taking initiatives without fear of criticism.\nCelebrating Small Wins: Recognizing incremental progress helps employees see their growth and reinforces self-confidence.",
+        "model_keywords": [
+          "organizational practices",
+          "self-esteem",
+          "confidence",
+          "training",
+          "skill development",
+          "positive feedback",
+          "recognition",
+          "challenging tasks",
+          "decision-making",
+          "mentoring",
+          "coaching",
+          "supportive environment",
+          "small wins"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 2,
+        "answer_type": "short",
+        "alignment_confidence": 0.587,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.456,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "b",
+        "student_text": "",
+        "model_text": "Create a personality profile of an ideal IT Project Manager by combining the Big Five Personality traits, Locus of Control, and key dimensions of Emotional Intelligence (EI).\nPersonality Profile of an Ideal IT Project Manager",
+        "model_keywords": [
+          "personality profile",
+          "IT Project Manager",
+          "Big Five Personality traits",
+          "Locus of Control",
+          "Emotional Intelligence",
+          "EI",
+          "openness",
+          "conscientiousness",
+          "extraversion",
+          "agreeableness",
+          "neuroticism",
+          "self-awareness",
+          "self-regulation"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 4,
+        "answer_type": "long",
+        "alignment_confidence": 0.0,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": null,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.0
+        }
+      },
+      {
+        "question_number": "1",
+        "student_text": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+        "model_text": "Big Five Personality Traits\nOpenness to Experience: High\nWilling to explore innovative solutions, adapt to new technologies, and\nembrace creative problem-solving.\nConscientiousness: Very High\nOrganized, dependable, detail-oriented, and capable of delivering projects\non time.\nExtraversion: Moderate to High\nEffective in communication, motivating team members, and stakeholder\nmanagement without being overly dominant.\nAgreeableness: High\nCooperative, supportive, and able to maintain positive team relationships\nwhile resolving conflicts diplomatically.\nNeuroticism (Emotional Stability): Low\nCalm under pressure, resilient to stress, and able to make rational\ndecisions in challenging situations.",
+        "model_keywords": [
+          "Openness to Experience",
+          "Conscientiousness",
+          "Extraversion",
+          "Agreeableness",
+          "Neuroticism",
+          "personality traits",
+          "innovative solutions",
+          "stakeholder management",
+          "team relationships",
+          "emotional stability",
+          "rational decisions"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.59,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.467,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "2",
+        "student_text": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+        "model_text": "Locus of Control\nInternal Locus of Control: High\nBelieves outcomes depend on their own actions, takes responsibility for\nproject success, and proactively addresses challenges.",
+        "model_keywords": [
+          "Locus of Control",
+          "Internal Locus of Control",
+          "outcomes",
+          "actions",
+          "responsibility",
+          "project success",
+          "challenges",
+          "proactive",
+          "beliefs",
+          "internal"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.62,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.567,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "3",
+        "student_text": "Taking K=5, taking instances 3, 6,5, 4 and 8\n5\n= Σ\nF(i) = 2.9+2.7+3.5+2.3+ 3.8 = 15.2= 3.04\nET\nK\n5\nb)\nx, = 1.0 , x2= - 2, x3=3\nw, = 0.2, w2 =-0.5, w3=0.7, b =0.4\nnet = w1.x, + w2. x2 + W3.x3 + b\n= (0.2) (1) + (-0.5) (-2) + (0.7) (3) + 0.4\n= 0.2+ 1+ 2.1+0.4\nnet = 3.7\nUnipolar sigmoid function = 1\n1+ e-net\n=\n=1\n1+e -3.7\n1+ 0.02\n. =",
+        "model_text": "Key Dimensions of Emotional Intelligence (EI)\nSelf-Awareness: Recognizes own strengths, weaknesses, and emotions\nto manage behavior effectively.\nSelf-Regulation: Maintains composure, handles stress, and responds\nthoughtfully rather than reactively.\nMotivation: Intrinsically driven to achieve goals, inspire the team, and\npursue continuous improvement.\nEmpathy: Understands team members' perspectives and needs,\nfacilitating better communication and conflict resolution.\nSocial Skills: Builds strong relationships, influences stakeholders,\nnegotiates effectively, and fosters teamwork.\nSummary:\nAn ideal IT Project Manager is organized, adaptable, and responsible,\nmaintains emotional stability under pressure, communicates effectively,\nmotivates the team, and takes proactive control of project outcomes while\nshowing empathy and collaborative leadership.",
+        "model_keywords": [
+          "Emotional Intelligence",
+          "Self-Awareness",
+          "Self-Regulation",
+          "Motivation",
+          "Empathy",
+          "Social Skills",
+          "IT Project Manager",
+          "emotional stability",
+          "communication",
+          "teamwork",
+          "leadership",
+          "stakeholders"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.587,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.455,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "i",
+        "student_text": "",
+        "model_text": "Identify and explain two strengths that may support Trisha's success as a project manager. (1 mark)\nStrong Locus of Control (Internal): Trisha believes that her effort and planning determine project outcomes. This means she is proactive, responsible, and persistent, which is essential for meeting project goals.\nSelf-Awareness and Self-Regulation (Emotional Intelligence): She understands her own emotions and maintains composure under pressure, helping her make thoughtful decisions and manage stressful situations effectively.",
+        "model_keywords": [
+          "strengths",
+          "project manager",
+          "locus of control",
+          "proactive",
+          "responsible",
+          "persistent",
+          "self-awareness",
+          "self-regulation",
+          "emotional intelligence",
+          "composure",
+          "stressful situations"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 1,
+        "answer_type": "short",
+        "alignment_confidence": 0.0,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": null,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.0
+        }
+      },
+      {
+        "question_number": "ii",
+        "student_text": "",
+        "model_text": "Identify and explain two weaknesses that might hinder her success. (1 mark)\nLow Self-Esteem in Leadership: Doubting her leadership abilities and second-guessing decisions, especially under senior management scrutiny, may reduce her confidence and decisiveness, negatively affecting team trust.\nDifficulty in Team Networking and Conflict Management: Struggling to motivate large groups and handle conflicts can lead to team dissatisfaction, micromanagement perception, and project delays, particularly with diverse personality types on the team.",
+        "model_keywords": [
+          "weaknesses",
+          "hinder success",
+          "low self-esteem",
+          "leadership abilities",
+          "second-guessing",
+          "team trust",
+          "team networking",
+          "conflict management",
+          "team dissatisfaction",
+          "micromanagement",
+          "project delays",
+          "personality types"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 1,
+        "answer_type": "short",
+        "alignment_confidence": 0.0,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": null,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.0
+        }
+      },
+      {
+        "question_number": "iii",
+        "student_text": "",
+        "model_text": "Based on these strengths and weaknesses, evaluate whether Trisha is likely to succeed in the long run. Support your answer with three arguments linked to the above concepts. (2 marks)\nProactive and Structured Approach: Her internal locus of control and preference for structured work means she takes ownership and plans effectively, which is a strong foundation for project management success.\nNeed for Leadership Confidence Development: Low self-esteem may limit her growth unless she builds confidence through mentorship, feedback, and small leadership wins, enabling her to make decisive and assertive choices.\nImportance of Enhancing Emotional Intelligence in Team Management:\nTo succeed long-term, Trisha must improve social skills and conflict management, leveraging her self-awareness to adapt leadership style to different team members' needs.\nVerdict: Trisha has the potential to succeed due to her planning, responsibility, and self-regulation.\nSuccess will depend on her developing confidence and interpersonal skills to manage team dynamics and gain trust.",
+        "model_keywords": [
+          "strengths",
+          "weaknesses",
+          "succeed",
+          "proactive",
+          "structured approach",
+          "locus of control",
+          "leadership confidence",
+          "emotional intelligence",
+          "team management",
+          "social skills",
+          "conflict management",
+          "self-awareness",
+          "team dynamics",
+          "trust"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 2,
+        "answer_type": "short",
+        "alignment_confidence": 0.0,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": null,
+          "keyword_overlap": 0.0,
+          "segment_confidence": 0.0
+        }
+      }
+    ],
+    "summary": {
+      "total_questions": 13,
+      "matched_questions": 8,
+      "high_confidence": 8,
+      "low_confidence": 0,
+      "unmatched": 5,
+      "overall_confidence": 0.367,
+      "segmentation_strategy": "existing_ocr"
+    }
+  },
+  "grading_input": [
+    {
+      "question_number": "1(a)",
+      "type": "long",
+      "student_answer": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+      "model_answer": "MotoCorp is a manufacturing firm where managers emphasize authority, close supervision, and strict discipline. Employees enjoy job security but report low motivation and lack of creativity. Based on the scenario, answer the following questions:\ni. Identify and define the OB model MotoCorp is following. (1 mark)\nMotoCorp is following the Custodial Model of Organizational Behaviour. This model is based on the economic resources of the organization, where employees' needs for security and welfare are fulfilled. Managers focus on providing job security and benefits, which results in employees' dependence on the organization rather than on managerial authority alone.\nii. What are the advantages and disadvantages of this model? (1 mark)\nAdvantages:\nProvides job security and stable employment.\nCreates a sense of loyalty and dependence on the organization.\nReduces resistance to authority, as employees feel secure.\nDisadvantages:\nEmployees may feel passive and dependent, leading to low motivation and creativity.\nLack of challenge and empowerment can reduce innovation and initiative.\nProductivity may remain at a mediocre level.\niii. Suggest a shift to a more suitable OB model and justify your choice. (1 mark)\nMotoCorp should shift to the Supportive Model.\nThis model emphasizes leadership, motivation, and participation, rather than just authority or security.\nIt encourages employee involvement, creativity, and job satisfaction.\nBy empowering employees and valuing their contributions, the organization can move from passive cooperation to active engagement and higher productivity.",
+      "max_marks": 3,
+      "keywords": {
+        "MotoCorp": [
+          "MotoCorp"
+        ],
+        "Custodial Model": [
+          "Custodial Model"
+        ],
+        "Organizational Behaviour": [
+          "Organizational Behaviour"
+        ],
+        "economic resources": [
+          "economic resources"
+        ],
+        "job security": [
+          "job security"
+        ],
+        "benefits": [
+          "benefits"
+        ],
+        "employee dependence": [
+          "employee dependence"
+        ],
+        "managerial authority": [
+          "managerial authority"
+        ],
+        "Supportive Model": [
+          "Supportive Model"
+        ],
+        "leadership": [
+          "leadership"
+        ],
+        "motivation": [
+          "motivation"
+        ],
+        "participation": [
+          "participation"
+        ],
+        "employee involvement": [
+          "employee involvement"
+        ],
+        "creativity": [
+          "creativity"
+        ],
+        "job satisfaction": [
+          "job satisfaction"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.573
+    },
+    {
+      "question_number": "1(b)",
+      "type": "long",
+      "student_answer": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+      "model_answer": "Define Organizational Behaviour. Explain the scope of Organizational Behaviour with example.\nDefinition: Organizational Behaviour is a field of study that investigates the impact that individuals, groups, and structure have on behaviour within organizations, for the purpose of applying such knowledge toward improving an organization's effectiveness.\nScope:\nIndividual Behaviour: Focuses on personality, perception, learning, values, attitudes, and motivation of employees.\nExample: Understanding why one employee is highly motivated while another shows apathy.\nGroup Behaviour: Studies group dynamics, leadership, teamwork, communication, conflict, and decision-making.\nExample: How team spirit and effective communication improve performance in a project team.\nOrganizational System: Examines the structure, culture, power, politics, and overall processes of the organization.\nExample: A flat organizational structure encouraging innovation versus a hierarchical structure emphasizing discipline.\nOrganizational Change and Development: Deals with managing change, stress, innovation, and organizational development programs.\nExample: Training employees to adapt to digital transformation initiatives.",
+      "max_marks": 3,
+      "keywords": {
+        "Organizational Behaviour": [
+          "Organizational Behaviour"
+        ],
+        "individuals": [
+          "individuals"
+        ],
+        "groups": [
+          "groups"
+        ],
+        "structure": [
+          "structure"
+        ],
+        "effectiveness": [
+          "effectiveness"
+        ],
+        "Individual Behaviour": [
+          "Individual Behaviour"
+        ],
+        "Group Behaviour": [
+          "Group Behaviour"
+        ],
+        "Organizational System": [
+          "Organizational System"
+        ],
+        "Organizational Change": [
+          "Organizational Change"
+        ],
+        "Development": [
+          "Development"
+        ],
+        "motivation": [
+          "motivation"
+        ],
+        "leadership": [
+          "leadership"
+        ],
+        "communication": [
+          "communication"
+        ],
+        "culture": [
+          "culture"
+        ],
+        "innovation": [
+          "innovation"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.599
+    },
+    {
+      "question_number": "2(a)",
+      "type": "short",
+      "student_answer": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+      "model_answer": "Represent Maslow's Hierarchy of Needs with a detailed pyramid diagram.",
+      "max_marks": 2,
+      "keywords": {
+        "Maslow's Hierarchy of Needs": [
+          "Maslow's Hierarchy of Needs"
+        ],
+        "pyramid": [
+          "pyramid"
+        ],
+        "Self-Actualization": [
+          "Self-Actualization"
+        ],
+        "Esteem": [
+          "Esteem"
+        ],
+        "Love & Belonging": [
+          "Love & Belonging"
+        ],
+        "Safety Needs": [
+          "Safety Needs"
+        ],
+        "Physiological Needs": [
+          "Physiological Needs"
+        ],
+        "Creativity": [
+          "Creativity"
+        ],
+        "Personal Growth": [
+          "Personal Growth"
+        ],
+        "Moral Development": [
+          "Moral Development"
+        ],
+        "Self Respect": [
+          "Self Respect"
+        ],
+        "Confidence": [
+          "Confidence"
+        ],
+        "Family": [
+          "Family"
+        ],
+        "Friendship": [
+          "Friendship"
+        ],
+        "Personal Security": [
+          "Personal Security"
+        ]
+      },
+      "content_types": [
+        "diagram"
+      ],
+      "diagram_data": {
+        "description": "The diagram is a pyramid representing Maslow's Hierarchy of Needs. The pyramid is divided into five levels, starting from Physiological Needs at the base and ascending to Self-Actualization at the top.",
+        "elements": [
+          "Physiological Needs",
+          "Safety Needs",
+          "Love & Belonging",
+          "Esteem",
+          "Self-Actualization"
+        ],
+        "connections": []
+      },
+      "math_expressions": [],
+      "alignment_confidence": 0.596
+    },
+    {
+      "question_number": "2(b)",
+      "type": "long",
+      "student_answer": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+      "model_answer": "Briefly explain the three components of attitude?\nAttitude is a learned predisposition to respond positively or negatively toward a person, object, or situation. It has three components:\nCognitive Component: Refers to the beliefs, thoughts, or knowledge a person has about something.\nExample: \"Working in a team increases productivity.\"\nAffective Component: Refers to the emotions or feelings a person has toward something.\nExample: Feeling happy and motivated when assigned a challenging project.\nBehavioural Component: Refers to the intent to act or observable actions based on beliefs and feelings.",
+      "max_marks": 3,
+      "keywords": {
+        "attitude": [
+          "attitude"
+        ],
+        "predisposition": [
+          "predisposition"
+        ],
+        "Cognitive Component": [
+          "Cognitive Component"
+        ],
+        "beliefs": [
+          "beliefs"
+        ],
+        "thoughts": [
+          "thoughts"
+        ],
+        "knowledge": [
+          "knowledge"
+        ],
+        "Affective Component": [
+          "Affective Component"
+        ],
+        "emotions": [
+          "emotions"
+        ],
+        "feelings": [
+          "feelings"
+        ],
+        "Behavioural Component": [
+          "Behavioural Component"
+        ],
+        "intent": [
+          "intent"
+        ],
+        "observable actions": [
+          "observable actions"
+        ],
+        "productivity": [
+          "productivity"
+        ],
+        "motivation": [
+          "motivation"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.619
+    },
+    {
+      "question_number": "c",
+      "type": "long",
+      "student_answer": "",
+      "model_answer": "Imagine you are a manager of a manufacturing team. Half your employees constantly look for guidance, while the other half show initiative and creativity.\n\nQuestions:\n\ni. If you apply only Theory X to the whole team, what will happen? (1 mark)\nTheory X assumes employees are lazy, need constant supervision, and avoid responsibility. Applying it to the entire team would demotivate the self-motivated, creative employees, stifle initiative, and reduce overall productivity.\n\nii. If you apply only Theory Y, what risks might occur? (1 mark)\nTheory Y assumes employees are self-motivated, responsible, and enjoy work. Applying it to the dependent employees who require guidance may lead to confusion, mistakes, and lack of discipline, as they may struggle without clear supervision.\n\niii. As manager, how will you balance your leadership style between Theory X and Y? (1 mark)\nUse an adaptive approach:\nApply Theory X management (close supervision, clear instructions) to employees who need guidance.\nApply Theory Y management (delegation, empowerment, encouragement of creativity) to self-motivated employees.\nThis approach maximizes productivity while maintaining motivation and creativity across the team.",
+      "max_marks": 3,
+      "keywords": {
+        "Theory X": [
+          "Theory X"
+        ],
+        "Theory Y": [
+          "Theory Y"
+        ],
+        "leadership style": [
+          "leadership style"
+        ],
+        "adaptive approach": [
+          "adaptive approach"
+        ],
+        "motivation": [
+          "motivation"
+        ],
+        "productivity": [
+          "productivity"
+        ],
+        "delegation": [
+          "delegation"
+        ],
+        "empowerment": [
+          "empowerment"
+        ],
+        "supervision": [
+          "supervision"
+        ],
+        "initiative": [
+          "initiative"
+        ],
+        "creativity": [
+          "creativity"
+        ],
+        "self-motivated": [
+          "self-motivated"
+        ],
+        "guidance": [
+          "guidance"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.0
+    },
+    {
+      "question_number": "3(a)",
+      "type": "short",
+      "student_answer": "Taking K=5, taking instances 3, 6,5, 4 and 8\n5\n= Σ\nF(i) = 2.9+2.7+3.5+2.3+ 3.8 = 15.2= 3.04\nET\nK\n5\nb)\nx, = 1.0 , x2= - 2, x3=3\nw, = 0.2, w2 =-0.5, w3=0.7, b =0.4\nnet = w1.x, + w2. x2 + W3.x3 + b\n= (0.2) (1) + (-0.5) (-2) + (0.7) (3) + 0.4\n= 0.2+ 1+ 2.1+0.4\nnet = 3.7\nUnipolar sigmoid function = 1\n1+ e-net\n=\n=1\n1+e -3.7\n1+ 0.02\n. =",
+      "model_answer": "Suggest four organizational practices that can help employees with low self-esteem gain confidence.\nTraining and Skill Development: Provide workshops, on-the-job training, and mentorship programs to help employees gain competence and feel capable.\nPositive Feedback and Recognition: Regularly acknowledge achievements, effort, and improvement to reinforce self-worth.\nAssigning Challenging but Achievable Tasks: Gradually increasing responsibility helps employees experience success and build confidence.\nEncouraging Participation in Decision-Making: Involve employees in team discussions and decisions to make them feel valued and capable.\nMentoring and Coaching: Pair employees with experienced mentors who can guide, encourage, and provide constructive feedback.\nCreating a Supportive Work Environment: Promote open communication, collaboration, and psychological safety, so employees feel comfortable taking initiatives without fear of criticism.\nCelebrating Small Wins: Recognizing incremental progress helps employees see their growth and reinforces self-confidence.",
+      "max_marks": 2,
+      "keywords": {
+        "organizational practices": [
+          "organizational practices"
+        ],
+        "self-esteem": [
+          "self-esteem"
+        ],
+        "confidence": [
+          "confidence"
+        ],
+        "training": [
+          "training"
+        ],
+        "skill development": [
+          "skill development"
+        ],
+        "positive feedback": [
+          "positive feedback"
+        ],
+        "recognition": [
+          "recognition"
+        ],
+        "challenging tasks": [
+          "challenging tasks"
+        ],
+        "decision-making": [
+          "decision-making"
+        ],
+        "mentoring": [
+          "mentoring"
+        ],
+        "coaching": [
+          "coaching"
+        ],
+        "supportive environment": [
+          "supportive environment"
+        ],
+        "small wins": [
+          "small wins"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.587
+    },
+    {
+      "question_number": "b",
+      "type": "long",
+      "student_answer": "",
+      "model_answer": "Create a personality profile of an ideal IT Project Manager by combining the Big Five Personality traits, Locus of Control, and key dimensions of Emotional Intelligence (EI).\nPersonality Profile of an Ideal IT Project Manager",
+      "max_marks": 4,
+      "keywords": {
+        "personality profile": [
+          "personality profile"
+        ],
+        "IT Project Manager": [
+          "IT Project Manager"
+        ],
+        "Big Five Personality traits": [
+          "Big Five Personality traits"
+        ],
+        "Locus of Control": [
+          "Locus of Control"
+        ],
+        "Emotional Intelligence": [
+          "Emotional Intelligence"
+        ],
+        "EI": [
+          "EI"
+        ],
+        "openness": [
+          "openness"
+        ],
+        "conscientiousness": [
+          "conscientiousness"
+        ],
+        "extraversion": [
+          "extraversion"
+        ],
+        "agreeableness": [
+          "agreeableness"
+        ],
+        "neuroticism": [
+          "neuroticism"
+        ],
+        "self-awareness": [
+          "self-awareness"
+        ],
+        "self-regulation": [
+          "self-regulation"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.0
+    },
+    {
+      "question_number": "1",
+      "type": "long",
+      "student_answer": "-\nStudent ID\nStamp of Signature\nof Exam. Incharge:\nExaminer\nMarks\nb\nd\nTotal\n02\n06\n03\nFor Office Use\nMarks\nQ. No.\nb\nd\nTotal\n5\n6\nMarks Obtained\neleven\nMarks Obtained\nGrand Total in Words...\n85\nSignature\nName of Examiner:\nSignature\nI have seen the answer book\nSignature of Student\n\n(Q2) a)\nTo find - The value of \"f\" for new query point (X1, X2) = (2.5,3.5)\nAs it is a regression problem having a set of continous data\nStep 1) Training a training example <X, F(x)> add the example to list.\nstep 3) Regression algo:-\nK\nf (xi)\nf(ni)\nK\neuclidean\nFirst, we need to calculate the Manhattan distance for each query pt.\n\nd, = √(2.5-1.2)²+ (3.5-2.3)²\n= √1.69+1.44 = √3.13 = 1.76\nd2 = √(2.5-3.4)²+(3.5-1.5)²\n= √0.81+4 = √4.81 = 2.19\nd3 = √(2.5-2.2)²+ (3.5-3.1)² = √0.09 + 0.16 = √0.25= 0.5 ,\nd4 = √(2.5-1.9)²+ (3.5-2.8)² = √0.36+0.49 = √0.85= 0.924\nd5= √(2.5-3.1)²+ (3.5-4.0)² =√0.36+0.25= √0.61= 0.783\nd6 = √(2.5- 2.0)²+ (3.5-3.5)²= √0.25+0 = √0.25 = 0.5\nd7 = √(2.5-1.5)²+ (3.5-1.0)² =√1+ 6.25 = √7.25 = 2.69\nd8 = √(2.5-3.7)²+ (3.5-3.2)²= √1.44 + 0.09 = √1.53= 1.23 5\nTaking K=3, we will take first 3 neighbours which are nearest.\nTaking instance no 3, 6 and 5 as neighbours which are nearest\n=\nf(xi)\n. =\n02\n•\nEntropy →\n- pi log₂ pi\nyes (+)\nno\n→ - 3\n→ - 3 log₂ 3 - 3\nlog₂ 3\n6\n6\n→ (-0.5 x -1) - (0.5 x-1)\n→ 0.5 + 0.5\nEntropy → 1\n\nyes (+)\n3\n2\n⇒-3 log₂4 - 109₂3\n26\n-\n3\n6\n⇒(-0.5x-1) - (0.5x-1)\n⇒ 0.5+0.5\nEntropy\n\nGain (a1)\nE (a1))=\nEntropy - Σ |Sv|. Entropy (sv))\n= 1 - 3 Entropy. (z) (241-) + * 3 entropy (z) 022\nTrue class\nFalse class - O\nentropy (z) + =] = - 3 log 1 - 3 log. z\n= (B-5x -02.5) - 0.5 x (-1.5)\n= 1.25 + 0.75\n= 2\n= (-0.5X -1.5) - (0.5 x - 2.5)\n= 0.75 + 1.25 =2\nFrom eq\" O\nGain tE(a,) = 1- (0.5x2 + 0.5x2)\n= 1 - (1+1) = 1-2 = -\n/Gain (a1) = 1\n\nGian Gain\nE (a2) =\nEntropy - Σ |Sv|. Entropy (sv))\n) (2,27 + 4az log. (z)\n(+, 1-)\n= (-6.66 x - 1.58) - (40.66 X -1.58)\n= d 1.04 + 1.04\n= 2.08\n= (-0.33X-2.58) - (0.33X - 2.58)\n= 0.85 + 0.85 = 1.7\nGain E (a2) = 1- (0.66 x 2.08) + (0.33X1.7)\n= 1- (1.37 + 0.56)\n=\n1- 0.93\nGain (a2) = - 0.93\n\nentropy(4/6)[2+,2-] = -(4/6)log2(2/6) - (4/6)log2(2/6) = (-0.66 x -1.58) - (-0.66 x -1.58) = 1.04 + 1.04 = 2.08\nentropy(2/6)[1+,1-] = -(2/6)log2(1/6) - (2/6)log2(1/6) = (-0.33 x -2.58) - (0.33 x -2.58) = 0.85 + 0.85 = 1.7\nGain E(a2) = 1 - (0.66 x 2.08) + (0.33 x 1.7) = 1 - (1.37 + 0.56) = 1 - 1.93\nGain(a2) = -0.93\n\n(Q3)\nLet w0, w1, w2 be the weights and x1, x2, x3 be the inputs in\nperceptron learning model and bias b\nnet = w0.x1 + w2.x2 + w3. x3 + b.\nUsing the net formula we will calculate the predicted output for\neach instances.\nUsing, handloom activation function,\nIf net >0, then output = 1\nnet <0, output = 0.\nWe will calculate the error after that using formula.\nerror = Target output - Predicted output\nIf error value comes o, then no weight updation\nIf error is other value than o, then apply formula.\nΔw = n. (t-o). xi)\n\nIf net < 0, output = 0.\n\nThis is weight updated where n is the actuation function,\n(t-o) is the error and xi is the input instance.\n:. [wnew = wold + Δw\nsimilarly, bias will also get updated using formula..\nΔ bias = n. (t-0). xi\nHere, the value of xi will be kept 1 always as it is\nthe fixed input in perception learning algorithm.\nbias new = bias old + Δ bias\nHence, whenever error is occured then weight and bias both are\nupdated simultaneously.",
+      "model_answer": "Big Five Personality Traits\nOpenness to Experience: High\nWilling to explore innovative solutions, adapt to new technologies, and\nembrace creative problem-solving.\nConscientiousness: Very High\nOrganized, dependable, detail-oriented, and capable of delivering projects\non time.\nExtraversion: Moderate to High\nEffective in communication, motivating team members, and stakeholder\nmanagement without being overly dominant.\nAgreeableness: High\nCooperative, supportive, and able to maintain positive team relationships\nwhile resolving conflicts diplomatically.\nNeuroticism (Emotional Stability): Low\nCalm under pressure, resilient to stress, and able to make rational\ndecisions in challenging situations.",
+      "max_marks": 3,
+      "keywords": {
+        "Openness to Experience": [
+          "Openness to Experience"
+        ],
+        "Conscientiousness": [
+          "Conscientiousness"
+        ],
+        "Extraversion": [
+          "Extraversion"
+        ],
+        "Agreeableness": [
+          "Agreeableness"
+        ],
+        "Neuroticism": [
+          "Neuroticism"
+        ],
+        "personality traits": [
+          "personality traits"
+        ],
+        "innovative solutions": [
+          "innovative solutions"
+        ],
+        "stakeholder management": [
+          "stakeholder management"
+        ],
+        "team relationships": [
+          "team relationships"
+        ],
+        "emotional stability": [
+          "emotional stability"
+        ],
+        "rational decisions": [
+          "rational decisions"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.59
+    },
+    {
+      "question_number": "2",
+      "type": "long",
+      "student_answer": "9+2.7+3.5 = 9.1 = 3.03\nK\nb)\nji)\nHigh Variance - over fitting\nHigh bias - Under fitting\nFalse, increase value of K leads to over fitting\nleading to high variance low bias.\nTrue, Lazy Learner builds their learning model during Training\nwhereas\neager Learner learns it and predicts before the training",
+      "model_answer": "Locus of Control\nInternal Locus of Control: High\nBelieves outcomes depend on their own actions, takes responsibility for\nproject success, and proactively addresses challenges.",
+      "max_marks": 3,
+      "keywords": {
+        "Locus of Control": [
+          "Locus of Control"
+        ],
+        "Internal Locus of Control": [
+          "Internal Locus of Control"
+        ],
+        "outcomes": [
+          "outcomes"
+        ],
+        "actions": [
+          "actions"
+        ],
+        "responsibility": [
+          "responsibility"
+        ],
+        "project success": [
+          "project success"
+        ],
+        "challenges": [
+          "challenges"
+        ],
+        "proactive": [
+          "proactive"
+        ],
+        "beliefs": [
+          "beliefs"
+        ],
+        "internal": [
+          "internal"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.62
+    },
+    {
+      "question_number": "3",
+      "type": "long",
+      "student_answer": "Taking K=5, taking instances 3, 6,5, 4 and 8\n5\n= Σ\nF(i) = 2.9+2.7+3.5+2.3+ 3.8 = 15.2= 3.04\nET\nK\n5\nb)\nx, = 1.0 , x2= - 2, x3=3\nw, = 0.2, w2 =-0.5, w3=0.7, b =0.4\nnet = w1.x, + w2. x2 + W3.x3 + b\n= (0.2) (1) + (-0.5) (-2) + (0.7) (3) + 0.4\n= 0.2+ 1+ 2.1+0.4\nnet = 3.7\nUnipolar sigmoid function = 1\n1+ e-net\n=\n=1\n1+e -3.7\n1+ 0.02\n. =",
+      "model_answer": "Key Dimensions of Emotional Intelligence (EI)\nSelf-Awareness: Recognizes own strengths, weaknesses, and emotions\nto manage behavior effectively.\nSelf-Regulation: Maintains composure, handles stress, and responds\nthoughtfully rather than reactively.\nMotivation: Intrinsically driven to achieve goals, inspire the team, and\npursue continuous improvement.\nEmpathy: Understands team members' perspectives and needs,\nfacilitating better communication and conflict resolution.\nSocial Skills: Builds strong relationships, influences stakeholders,\nnegotiates effectively, and fosters teamwork.\nSummary:\nAn ideal IT Project Manager is organized, adaptable, and responsible,\nmaintains emotional stability under pressure, communicates effectively,\nmotivates the team, and takes proactive control of project outcomes while\nshowing empathy and collaborative leadership.",
+      "max_marks": 3,
+      "keywords": {
+        "Emotional Intelligence": [
+          "Emotional Intelligence"
+        ],
+        "Self-Awareness": [
+          "Self-Awareness"
+        ],
+        "Self-Regulation": [
+          "Self-Regulation"
+        ],
+        "Motivation": [
+          "Motivation"
+        ],
+        "Empathy": [
+          "Empathy"
+        ],
+        "Social Skills": [
+          "Social Skills"
+        ],
+        "IT Project Manager": [
+          "IT Project Manager"
+        ],
+        "emotional stability": [
+          "emotional stability"
+        ],
+        "communication": [
+          "communication"
+        ],
+        "teamwork": [
+          "teamwork"
+        ],
+        "leadership": [
+          "leadership"
+        ],
+        "stakeholders": [
+          "stakeholders"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.587
+    },
+    {
+      "question_number": "i",
+      "type": "short",
+      "student_answer": "",
+      "model_answer": "Identify and explain two strengths that may support Trisha's success as a project manager. (1 mark)\nStrong Locus of Control (Internal): Trisha believes that her effort and planning determine project outcomes. This means she is proactive, responsible, and persistent, which is essential for meeting project goals.\nSelf-Awareness and Self-Regulation (Emotional Intelligence): She understands her own emotions and maintains composure under pressure, helping her make thoughtful decisions and manage stressful situations effectively.",
+      "max_marks": 1,
+      "keywords": {
+        "strengths": [
+          "strengths"
+        ],
+        "project manager": [
+          "project manager"
+        ],
+        "locus of control": [
+          "locus of control"
+        ],
+        "proactive": [
+          "proactive"
+        ],
+        "responsible": [
+          "responsible"
+        ],
+        "persistent": [
+          "persistent"
+        ],
+        "self-awareness": [
+          "self-awareness"
+        ],
+        "self-regulation": [
+          "self-regulation"
+        ],
+        "emotional intelligence": [
+          "emotional intelligence"
+        ],
+        "composure": [
+          "composure"
+        ],
+        "stressful situations": [
+          "stressful situations"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.0
+    },
+    {
+      "question_number": "ii",
+      "type": "short",
+      "student_answer": "",
+      "model_answer": "Identify and explain two weaknesses that might hinder her success. (1 mark)\nLow Self-Esteem in Leadership: Doubting her leadership abilities and second-guessing decisions, especially under senior management scrutiny, may reduce her confidence and decisiveness, negatively affecting team trust.\nDifficulty in Team Networking and Conflict Management: Struggling to motivate large groups and handle conflicts can lead to team dissatisfaction, micromanagement perception, and project delays, particularly with diverse personality types on the team.",
+      "max_marks": 1,
+      "keywords": {
+        "weaknesses": [
+          "weaknesses"
+        ],
+        "hinder success": [
+          "hinder success"
+        ],
+        "low self-esteem": [
+          "low self-esteem"
+        ],
+        "leadership abilities": [
+          "leadership abilities"
+        ],
+        "second-guessing": [
+          "second-guessing"
+        ],
+        "team trust": [
+          "team trust"
+        ],
+        "team networking": [
+          "team networking"
+        ],
+        "conflict management": [
+          "conflict management"
+        ],
+        "team dissatisfaction": [
+          "team dissatisfaction"
+        ],
+        "micromanagement": [
+          "micromanagement"
+        ],
+        "project delays": [
+          "project delays"
+        ],
+        "personality types": [
+          "personality types"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.0
+    },
+    {
+      "question_number": "iii",
+      "type": "short",
+      "student_answer": "",
+      "model_answer": "Based on these strengths and weaknesses, evaluate whether Trisha is likely to succeed in the long run. Support your answer with three arguments linked to the above concepts. (2 marks)\nProactive and Structured Approach: Her internal locus of control and preference for structured work means she takes ownership and plans effectively, which is a strong foundation for project management success.\nNeed for Leadership Confidence Development: Low self-esteem may limit her growth unless she builds confidence through mentorship, feedback, and small leadership wins, enabling her to make decisive and assertive choices.\nImportance of Enhancing Emotional Intelligence in Team Management:\nTo succeed long-term, Trisha must improve social skills and conflict management, leveraging her self-awareness to adapt leadership style to different team members' needs.\nVerdict: Trisha has the potential to succeed due to her planning, responsibility, and self-regulation.\nSuccess will depend on her developing confidence and interpersonal skills to manage team dynamics and gain trust.",
+      "max_marks": 2,
+      "keywords": {
+        "strengths": [
+          "strengths"
+        ],
+        "weaknesses": [
+          "weaknesses"
+        ],
+        "succeed": [
+          "succeed"
+        ],
+        "proactive": [
+          "proactive"
+        ],
+        "structured approach": [
+          "structured approach"
+        ],
+        "locus of control": [
+          "locus of control"
+        ],
+        "leadership confidence": [
+          "leadership confidence"
+        ],
+        "emotional intelligence": [
+          "emotional intelligence"
+        ],
+        "team management": [
+          "team management"
+        ],
+        "social skills": [
+          "social skills"
+        ],
+        "conflict management": [
+          "conflict management"
+        ],
+        "self-awareness": [
+          "self-awareness"
+        ],
+        "team dynamics": [
+          "team dynamics"
+        ],
+        "trust": [
+          "trust"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.0
+    }
+  ]
+}

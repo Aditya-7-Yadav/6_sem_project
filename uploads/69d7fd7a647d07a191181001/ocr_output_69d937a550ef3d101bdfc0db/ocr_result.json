@@ -1,0 +1,879 @@
+{
+  "segments": {
+    "segments": {
+      "1": {
+        "text": "An IP address is a unique numerical identifier assigned to each device on a network.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "1"
+      },
+      "2": {
+        "text": "Latency is the time delay between sending and receiving data.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "2"
+      },
+      "3": {
+        "text": "CPU stands for Central Processing Unit.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "3"
+      },
+      "4": {
+        "text": "HTTP stands for Hyper Text Transfer Protocol.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "4"
+      },
+      "5": {
+        "text": "Ram is volatile, ROM is non volatile.\nRAM:\nIt is used for temporary storage.\nROM:\nIt is used for permanent instructions.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "5"
+      },
+      "6": {
+        "text": "A firewall is a network security system that monitors and controls incoming and outgoing traffic. It is used to protect systems from unauthorized access.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "6"
+      },
+      "7": {
+        "text": "The Domain Name System (DNS) is used to translate human readable domain names to IP addresses. This helps computers locate servers.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "7"
+      },
+      "8": {
+        "text": "Load Balancing is the process of distributing incoming network traffic across multiple servers to ensure no single server is overloaded.\nThis improves system performance by sharing workload, ensures high availability and scalability.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "8"
+      },
+      "9": {
+        "text": "The OSI (Open System Interconnection) model is a conceptual framework used to understand how data is transmitted over a network.\nPhysical layer → Transmits raw bits\nData link layer → Handles error detection\nNetwork Layer - Responsible for routing\nTransport Layer → Ensures reliable data transfer.\nSession Layer - Manages communication session",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "9"
+      },
+      "10": {
+        "text": "Data Transmission over the internet follows a structured process using networking protocols and devices.",
+        "confidence": 0.9,
+        "source": "existing_ocr",
+        "matched_from": "10"
+      }
+    },
+    "unmatched_text": "",
+    "strategy_used": "existing_ocr"
+  },
+  "alignment": {
+    "aligned_pairs": [
+      {
+        "question_number": "1",
+        "student_text": "An IP address is a unique numerical identifier assigned to each device on a network.",
+        "model_text": "An IP address is a unique numerical identifier assigned to each device on a network.",
+        "model_keywords": [
+          "IP address",
+          "numerical identifier",
+          "device",
+          "network",
+          "unique"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 1,
+        "answer_type": "short",
+        "alignment_confidence": 0.95,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 1.0,
+          "keyword_overlap": 1.0,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "2",
+        "student_text": "Latency is the time delay between sending and receiving data.",
+        "model_text": "Latency is the time delay between sending and receiving data.",
+        "model_keywords": [
+          "latency",
+          "time delay",
+          "sending",
+          "receiving",
+          "data",
+          "networking"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 1,
+        "answer_type": "short",
+        "alignment_confidence": 0.917,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 1.0,
+          "keyword_overlap": 0.833,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "3",
+        "student_text": "CPU stands for Central Processing Unit.",
+        "model_text": "CPU stands for Central Processing Unit.",
+        "model_keywords": [
+          "CPU",
+          "Central Processing Unit",
+          "processor",
+          "cpu",
+          "stands",
+          "central",
+          "processing",
+          "unit",
+          "cpu stands",
+          "central processing",
+          "processing unit"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 1,
+        "answer_type": "short",
+        "alignment_confidence": 0.932,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 1.0,
+          "keyword_overlap": 0.909,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "4",
+        "student_text": "HTTP stands for Hyper Text Transfer Protocol.",
+        "model_text": "HTTP stands for HyperText Transfer Protocol.",
+        "model_keywords": [
+          "HTTP",
+          "HyperText Transfer Protocol",
+          "protocol",
+          "web",
+          "http",
+          "stands",
+          "hypertext",
+          "transfer",
+          "http stands",
+          "hypertext transfer",
+          "transfer protocol"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 1,
+        "answer_type": "short",
+        "alignment_confidence": 0.873,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.987,
+          "keyword_overlap": 0.636,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "5",
+        "student_text": "Ram is volatile, ROM is non volatile.\nRAM:\nIt is used for temporary storage.\nROM:\nIt is used for permanent instructions.",
+        "model_text": "RAM is volatile memory and loses data when power is off, while ROM is non-volatile and retains data. RAM stores temporary data for active processing, whereas ROM stores permanent instructions like firmware. RAM is faster and easily modifiable, while ROM is slower and mostly read-only.\nReassembly:\nAt the receiver's end, packets are reassembled in the correct order to form the original data.",
+        "model_keywords": [
+          "RAM",
+          "ROM",
+          "volatile memory",
+          "non-volatile",
+          "temporary data",
+          "permanent instructions",
+          "firmware",
+          "read-only",
+          "active processing",
+          "modifiable",
+          "reassembly",
+          "receiver",
+          "packets",
+          "order",
+          "original data"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 2,
+        "answer_type": "short",
+        "alignment_confidence": 0.767,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.922,
+          "keyword_overlap": 0.2,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "6",
+        "student_text": "A firewall is a network security system that monitors and controls incoming and outgoing traffic. It is used to protect systems from unauthorized access.",
+        "model_text": "A firewall is a network security system that monitors and controls incoming and outgoing traffic based on security rules. It is used to protect systems from unauthorized access, malware, and cyber attacks.\nDisplay:\nThe browser interprets and displays the data (webpage, video, etc.)",
+        "model_keywords": [
+          "firewall",
+          "network security system",
+          "incoming traffic",
+          "outgoing traffic",
+          "security rules",
+          "unauthorized access",
+          "malware",
+          "cyber attacks",
+          "protect systems",
+          "display",
+          "browser",
+          "interprets",
+          "data",
+          "webpage",
+          "video"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 2,
+        "answer_type": "short",
+        "alignment_confidence": 0.81,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.979,
+          "keyword_overlap": 0.333,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "7",
+        "student_text": "The Domain Name System (DNS) is used to translate human readable domain names to IP addresses. This helps computers locate servers.",
+        "model_text": "Explain the working of DNS in brief.\nAns: The Domain Name System (DNS) is used to translate human-readable domain names into IP addresses.\nWorking:\n1. When a user enters a domain (e.g., google.com), the request is sent to a DNS resolver.\n2. The resolver checks its cache; if not found, it queries root, TLD, and authoritative DNS servers.\n3. The correct IP address is returned to the client.\n4. The browser then uses this IP to connect to the web server.",
+        "model_keywords": [
+          "Domain Name System",
+          "DNS",
+          "human-readable domain names",
+          "IP addresses",
+          "DNS resolver",
+          "cache",
+          "root",
+          "TLD",
+          "authoritative DNS servers",
+          "IP address",
+          "client",
+          "browser",
+          "web server"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.789,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.926,
+          "keyword_overlap": 0.308,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "8",
+        "student_text": "Load Balancing is the process of distributing incoming network traffic across multiple servers to ensure no single server is overloaded.\nThis improves system performance by sharing workload, ensures high availability and scalability.",
+        "model_text": "What is load balancing? Mention its importance.\nAns: Load balancing is the process of distributing incoming network traffic across multiple servers to ensure no single server is overloaded.\nImportance:\n• Improves system performance by sharing workload\n• Ensures high availability (if one server fails, others handle requests)\n• Enhances scalability by allowing more servers to be added\n• Reduces response time for users",
+        "model_keywords": [
+          "load balancing",
+          "network traffic",
+          "multiple servers",
+          "overloaded",
+          "system performance",
+          "workload",
+          "high availability",
+          "scalability",
+          "response time"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 3,
+        "answer_type": "long",
+        "alignment_confidence": 0.911,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.943,
+          "keyword_overlap": 0.889,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "9",
+        "student_text": "The OSI (Open System Interconnection) model is a conceptual framework used to understand how data is transmitted over a network.\nPhysical layer → Transmits raw bits\nData link layer → Handles error detection\nNetwork Layer - Responsible for routing\nTransport Layer → Ensures reliable data transfer.\nSession Layer - Manages communication session",
+        "model_text": "Explain the OSI model and list its layers.\nAns: The OSI (Open Systems Interconnection) model is a conceptual framework used to understand how data is transmitted over a network. It divides communication into seven layers, each with specific functions.",
+        "model_keywords": [
+          "OSI model",
+          "Open Systems Interconnection",
+          "conceptual framework",
+          "data transmission",
+          "network",
+          "communication",
+          "seven layers",
+          "functions"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 4,
+        "answer_type": "long",
+        "alignment_confidence": 0.807,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.939,
+          "keyword_overlap": 0.375,
+          "segment_confidence": 0.9
+        }
+      },
+      {
+        "question_number": "10",
+        "student_text": "Data Transmission over the internet follows a structured process using networking protocols and devices.",
+        "model_text": "Explain how data is transmitted over the internet.\nAns: Data transmission over the internet follows a structured process using networking protocols and devices:\n1. User Request:\nThe sender enters a URL in the browser. DNS translates it into an IP address.\n2. Data Packet Formation:\nThe data is divided into smaller units called packets. Each packet contains:\nΟ\nSource IP\nΟ Destination IP\nΟ Data\n3. Transmission via Network:\nPackets travel through multiple routers and switches across different paths in the network.\n4. Protocol Handling:\nProtocols like:\nΟ\nTCP ensure reliable delivery (error checking, ordering)",
+        "model_keywords": [
+          "data transmission",
+          "internet",
+          "networking protocols",
+          "user request",
+          "URL",
+          "DNS",
+          "IP address",
+          "data packet formation",
+          "packets",
+          "source IP",
+          "destination IP",
+          "transmission via network",
+          "routers",
+          "switches",
+          "protocol handling",
+          "TCP"
+        ],
+        "content_types": [
+          "text"
+        ],
+        "max_marks": 5,
+        "answer_type": "long",
+        "alignment_confidence": 0.737,
+        "alignment_source": "existing_ocr",
+        "diagram_data": null,
+        "math_expressions": [],
+        "verification": {
+          "semantic_similarity": 0.832,
+          "keyword_overlap": 0.188,
+          "segment_confidence": 0.9
+        }
+      }
+    ],
+    "summary": {
+      "total_questions": 10,
+      "matched_questions": 10,
+      "high_confidence": 10,
+      "low_confidence": 0,
+      "unmatched": 0,
+      "overall_confidence": 0.849,
+      "segmentation_strategy": "existing_ocr"
+    }
+  },
+  "grading_input": [
+    {
+      "question_number": "1",
+      "type": "short",
+      "student_answer": "An IP address is a unique numerical identifier assigned to each device on a network.",
+      "model_answer": "An IP address is a unique numerical identifier assigned to each device on a network.",
+      "max_marks": 1,
+      "keywords": {
+        "IP address": [
+          "IP address"
+        ],
+        "numerical identifier": [
+          "numerical identifier"
+        ],
+        "device": [
+          "device"
+        ],
+        "network": [
+          "network"
+        ],
+        "unique": [
+          "unique"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.95
+    },
+    {
+      "question_number": "2",
+      "type": "short",
+      "student_answer": "Latency is the time delay between sending and receiving data.",
+      "model_answer": "Latency is the time delay between sending and receiving data.",
+      "max_marks": 1,
+      "keywords": {
+        "latency": [
+          "latency"
+        ],
+        "time delay": [
+          "time delay"
+        ],
+        "sending": [
+          "sending"
+        ],
+        "receiving": [
+          "receiving"
+        ],
+        "data": [
+          "data"
+        ],
+        "networking": [
+          "networking"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.917
+    },
+    {
+      "question_number": "3",
+      "type": "short",
+      "student_answer": "CPU stands for Central Processing Unit.",
+      "model_answer": "CPU stands for Central Processing Unit.",
+      "max_marks": 1,
+      "keywords": {
+        "CPU": [
+          "CPU"
+        ],
+        "Central Processing Unit": [
+          "Central Processing Unit"
+        ],
+        "processor": [
+          "processor"
+        ],
+        "cpu": [
+          "cpu"
+        ],
+        "stands": [
+          "stands"
+        ],
+        "central": [
+          "central"
+        ],
+        "processing": [
+          "processing"
+        ],
+        "unit": [
+          "unit"
+        ],
+        "cpu stands": [
+          "cpu stands"
+        ],
+        "central processing": [
+          "central processing"
+        ],
+        "processing unit": [
+          "processing unit"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.932
+    },
+    {
+      "question_number": "4",
+      "type": "short",
+      "student_answer": "HTTP stands for Hyper Text Transfer Protocol.",
+      "model_answer": "HTTP stands for HyperText Transfer Protocol.",
+      "max_marks": 1,
+      "keywords": {
+        "HTTP": [
+          "HTTP"
+        ],
+        "HyperText Transfer Protocol": [
+          "HyperText Transfer Protocol"
+        ],
+        "protocol": [
+          "protocol"
+        ],
+        "web": [
+          "web"
+        ],
+        "http": [
+          "http"
+        ],
+        "stands": [
+          "stands"
+        ],
+        "hypertext": [
+          "hypertext"
+        ],
+        "transfer": [
+          "transfer"
+        ],
+        "http stands": [
+          "http stands"
+        ],
+        "hypertext transfer": [
+          "hypertext transfer"
+        ],
+        "transfer protocol": [
+          "transfer protocol"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.873
+    },
+    {
+      "question_number": "5",
+      "type": "short",
+      "student_answer": "Ram is volatile, ROM is non volatile.\nRAM:\nIt is used for temporary storage.\nROM:\nIt is used for permanent instructions.",
+      "model_answer": "RAM is volatile memory and loses data when power is off, while ROM is non-volatile and retains data. RAM stores temporary data for active processing, whereas ROM stores permanent instructions like firmware. RAM is faster and easily modifiable, while ROM is slower and mostly read-only.\nReassembly:\nAt the receiver's end, packets are reassembled in the correct order to form the original data.",
+      "max_marks": 2,
+      "keywords": {
+        "RAM": [
+          "RAM"
+        ],
+        "ROM": [
+          "ROM"
+        ],
+        "volatile memory": [
+          "volatile memory"
+        ],
+        "non-volatile": [
+          "non-volatile"
+        ],
+        "temporary data": [
+          "temporary data"
+        ],
+        "permanent instructions": [
+          "permanent instructions"
+        ],
+        "firmware": [
+          "firmware"
+        ],
+        "read-only": [
+          "read-only"
+        ],
+        "active processing": [
+          "active processing"
+        ],
+        "modifiable": [
+          "modifiable"
+        ],
+        "reassembly": [
+          "reassembly"
+        ],
+        "receiver": [
+          "receiver"
+        ],
+        "packets": [
+          "packets"
+        ],
+        "order": [
+          "order"
+        ],
+        "original data": [
+          "original data"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.767
+    },
+    {
+      "question_number": "6",
+      "type": "short",
+      "student_answer": "A firewall is a network security system that monitors and controls incoming and outgoing traffic. It is used to protect systems from unauthorized access.",
+      "model_answer": "A firewall is a network security system that monitors and controls incoming and outgoing traffic based on security rules. It is used to protect systems from unauthorized access, malware, and cyber attacks.\nDisplay:\nThe browser interprets and displays the data (webpage, video, etc.)",
+      "max_marks": 2,
+      "keywords": {
+        "firewall": [
+          "firewall"
+        ],
+        "network security system": [
+          "network security system"
+        ],
+        "incoming traffic": [
+          "incoming traffic"
+        ],
+        "outgoing traffic": [
+          "outgoing traffic"
+        ],
+        "security rules": [
+          "security rules"
+        ],
+        "unauthorized access": [
+          "unauthorized access"
+        ],
+        "malware": [
+          "malware"
+        ],
+        "cyber attacks": [
+          "cyber attacks"
+        ],
+        "protect systems": [
+          "protect systems"
+        ],
+        "display": [
+          "display"
+        ],
+        "browser": [
+          "browser"
+        ],
+        "interprets": [
+          "interprets"
+        ],
+        "data": [
+          "data"
+        ],
+        "webpage": [
+          "webpage"
+        ],
+        "video": [
+          "video"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.81
+    },
+    {
+      "question_number": "7",
+      "type": "long",
+      "student_answer": "The Domain Name System (DNS) is used to translate human readable domain names to IP addresses. This helps computers locate servers.",
+      "model_answer": "Explain the working of DNS in brief.\nAns: The Domain Name System (DNS) is used to translate human-readable domain names into IP addresses.\nWorking:\n1. When a user enters a domain (e.g., google.com), the request is sent to a DNS resolver.\n2. The resolver checks its cache; if not found, it queries root, TLD, and authoritative DNS servers.\n3. The correct IP address is returned to the client.\n4. The browser then uses this IP to connect to the web server.",
+      "max_marks": 3,
+      "keywords": {
+        "Domain Name System": [
+          "Domain Name System"
+        ],
+        "DNS": [
+          "DNS"
+        ],
+        "human-readable domain names": [
+          "human-readable domain names"
+        ],
+        "IP addresses": [
+          "IP addresses"
+        ],
+        "DNS resolver": [
+          "DNS resolver"
+        ],
+        "cache": [
+          "cache"
+        ],
+        "root": [
+          "root"
+        ],
+        "TLD": [
+          "TLD"
+        ],
+        "authoritative DNS servers": [
+          "authoritative DNS servers"
+        ],
+        "IP address": [
+          "IP address"
+        ],
+        "client": [
+          "client"
+        ],
+        "browser": [
+          "browser"
+        ],
+        "web server": [
+          "web server"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.789
+    },
+    {
+      "question_number": "8",
+      "type": "long",
+      "student_answer": "Load Balancing is the process of distributing incoming network traffic across multiple servers to ensure no single server is overloaded.\nThis improves system performance by sharing workload, ensures high availability and scalability.",
+      "model_answer": "What is load balancing? Mention its importance.\nAns: Load balancing is the process of distributing incoming network traffic across multiple servers to ensure no single server is overloaded.\nImportance:\n• Improves system performance by sharing workload\n• Ensures high availability (if one server fails, others handle requests)\n• Enhances scalability by allowing more servers to be added\n• Reduces response time for users",
+      "max_marks": 3,
+      "keywords": {
+        "load balancing": [
+          "load balancing"
+        ],
+        "network traffic": [
+          "network traffic"
+        ],
+        "multiple servers": [
+          "multiple servers"
+        ],
+        "overloaded": [
+          "overloaded"
+        ],
+        "system performance": [
+          "system performance"
+        ],
+        "workload": [
+          "workload"
+        ],
+        "high availability": [
+          "high availability"
+        ],
+        "scalability": [
+          "scalability"
+        ],
+        "response time": [
+          "response time"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.911
+    },
+    {
+      "question_number": "9",
+      "type": "long",
+      "student_answer": "The OSI (Open System Interconnection) model is a conceptual framework used to understand how data is transmitted over a network.\nPhysical layer → Transmits raw bits\nData link layer → Handles error detection\nNetwork Layer - Responsible for routing\nTransport Layer → Ensures reliable data transfer.\nSession Layer - Manages communication session",
+      "model_answer": "Explain the OSI model and list its layers.\nAns: The OSI (Open Systems Interconnection) model is a conceptual framework used to understand how data is transmitted over a network. It divides communication into seven layers, each with specific functions.",
+      "max_marks": 4,
+      "keywords": {
+        "OSI model": [
+          "OSI model"
+        ],
+        "Open Systems Interconnection": [
+          "Open Systems Interconnection"
+        ],
+        "conceptual framework": [
+          "conceptual framework"
+        ],
+        "data transmission": [
+          "data transmission"
+        ],
+        "network": [
+          "network"
+        ],
+        "communication": [
+          "communication"
+        ],
+        "seven layers": [
+          "seven layers"
+        ],
+        "functions": [
+          "functions"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.807
+    },
+    {
+      "question_number": "10",
+      "type": "long",
+      "student_answer": "Data Transmission over the internet follows a structured process using networking protocols and devices.",
+      "model_answer": "Explain how data is transmitted over the internet.\nAns: Data transmission over the internet follows a structured process using networking protocols and devices:\n1. User Request:\nThe sender enters a URL in the browser. DNS translates it into an IP address.\n2. Data Packet Formation:\nThe data is divided into smaller units called packets. Each packet contains:\nΟ\nSource IP\nΟ Destination IP\nΟ Data\n3. Transmission via Network:\nPackets travel through multiple routers and switches across different paths in the network.\n4. Protocol Handling:\nProtocols like:\nΟ\nTCP ensure reliable delivery (error checking, ordering)",
+      "max_marks": 5,
+      "keywords": {
+        "data transmission": [
+          "data transmission"
+        ],
+        "internet": [
+          "internet"
+        ],
+        "networking protocols": [
+          "networking protocols"
+        ],
+        "user request": [
+          "user request"
+        ],
+        "URL": [
+          "URL"
+        ],
+        "DNS": [
+          "DNS"
+        ],
+        "IP address": [
+          "IP address"
+        ],
+        "data packet formation": [
+          "data packet formation"
+        ],
+        "packets": [
+          "packets"
+        ],
+        "source IP": [
+          "source IP"
+        ],
+        "destination IP": [
+          "destination IP"
+        ],
+        "transmission via network": [
+          "transmission via network"
+        ],
+        "routers": [
+          "routers"
+        ],
+        "switches": [
+          "switches"
+        ],
+        "protocol handling": [
+          "protocol handling"
+        ],
+        "TCP": [
+          "TCP"
+        ]
+      },
+      "content_types": [
+        "text"
+      ],
+      "diagram_data": null,
+      "math_expressions": [],
+      "alignment_confidence": 0.737
+    }
+  ]
+}

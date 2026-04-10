@@ -1,0 +1,492 @@
+[
+  {
+    "questionNumber": ".1(a)",
+    "modelAnswer": "MotoCorp is a manufacturing firm where managers emphasize authority, close supervision, and strict discipline. Employees enjoy job security but report low motivation and lack of creativity. Based on the scenario, answer the following questions:\ni. Identify and define the OB model MotoCorp is following. (1 mark)\nii. What are the advantages and disadvantages of this model? (1 mark)\niii. Suggest a shift to a more suitable OB model and justify your choice. (1 mark)\ni. Identify and define the OB model MotoCorp is following. (1 mark)\nMotoCorp is following the Custodial Model of Organizational Behaviour.\nThis model is based on the economic resources of the organization, where\nemployees' needs for security and welfare are fulfilled. Managers focus on\nproviding job security and benefits, which results in employees'\ndependence on the organization rather than on managerial authority alone.\nii. What are the advantages and disadvantages of this model? (1 mark)\nAdvantages:\nProvides job security and stable employment.\nCreates a sense of loyalty and dependence on the organization.\nReduces resistance to authority, as employees feel secure.\nDisadvantages:\nEmployees may feel passive and dependent, leading to low motivation and\ncreativity.\nLack of challenge and empowerment can reduce innovation and initiative.\nProductivity may remain at a mediocre level.\niii. Suggest a shift to a more suitable OB model and justify your choice.\n(1 mark)\nMotoCorp should shift to the Supportive Model.\nThis model emphasizes leadership, motivation, and participation, rather\nthan just authority or security.\nIt encourages employee involvement, creativity, and job satisfaction.\nBy empowering employees and valuing their contributions, the organization\ncan move from passive cooperation to active engagement and higher\nproductivity.",
+    "maxMarks": 3,
+    "type": "long",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "authority",
+      "close supervision",
+      "strict discipline",
+      "job security",
+      "low motivation",
+      "lack of creativity",
+      "OB model",
+      "advantages",
+      "disadvantages",
+      "suitable OB model",
+      "Custodial Model",
+      "Organizational Behaviour",
+      "economic resources",
+      "security",
+      "welfare",
+      "benefits",
+      "employee dependence",
+      "managerial authority",
+      "stable employment",
+      "loyalty",
+      "dependence",
+      "resistance to authority",
+      "passive",
+      "creativity",
+      "challenge",
+      "empowerment",
+      "innovation",
+      "initiative",
+      "productivity",
+      "Supportive Model",
+      "leadership",
+      "motivation",
+      "participation",
+      "employee involvement",
+      "job satisfaction",
+      "empowering employees",
+      "passive cooperation",
+      "active engagement"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": ".1(b)",
+    "modelAnswer": "Define Organizational Behaviour. Explain the scope of Organizational Behaviour with example.",
+    "maxMarks": 3,
+    "type": "long",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "Organizational Behaviour",
+      "definition",
+      "scope",
+      "example",
+      "organizational",
+      "behaviour",
+      "organizational behaviour"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": ".2(a)",
+    "modelAnswer": "Represent Maslow's Hierarchy of Needs with a detailed pyramid diagram.\nRepresent Maslow's Hierarchy of Needs with a detailed pyramid diagram.",
+    "maxMarks": 2,
+    "type": "short",
+    "contentTypes": [
+      "text",
+      "diagram"
+    ],
+    "keywords": [
+      "Maslow's Hierarchy of Needs",
+      "pyramid diagram",
+      "physiological needs",
+      "safety needs",
+      "love/belonging needs",
+      "esteem needs",
+      "self-actualization",
+      "pyramid",
+      "Physiological Needs",
+      "Safety Needs",
+      "Love & Belonging",
+      "Esteem",
+      "Self-Actualisation",
+      "biological requirements",
+      "security",
+      "social connection",
+      "recognition",
+      "creativity"
+    ],
+    "diagramData": {
+      "description": "A pyramid diagram representing Maslow's Hierarchy of Needs.",
+      "elements": [
+        "Self-actualization",
+        "Esteem",
+        "Love/Belonging",
+        "Safety",
+        "Physiological"
+      ],
+      "connections": [
+        [
+          "Physiological",
+          "Safety"
+        ],
+        [
+          "Safety",
+          "Love/Belonging"
+        ],
+        [
+          "Love/Belonging",
+          "Esteem"
+        ],
+        [
+          "Esteem",
+          "Self-actualization"
+        ]
+      ]
+    },
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": ".2(b)",
+    "modelAnswer": "Briefly explain the three components of attitude?\nBriefly explain the three components of attitude?\nAttitude is a learned predisposition to respond positively or negatively toward a person, object, or situation. It has three components:\nCognitive Component: Refers to the beliefs, thoughts, or knowledge a person has about something.\nExample: \"Working in a team increases productivity.\"\nAffective Component: Refers to the emotions or feelings a person has toward something.\nExample: Feeling happy and motivated when assigned a challenging project.\nBehavioural Component: Refers to the intent to act or observable actions based on beliefs and feelings.",
+    "maxMarks": 3,
+    "type": "long",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "attitude",
+      "cognitive component",
+      "affective component",
+      "behavioral component",
+      "beliefs",
+      "feelings",
+      "actions",
+      "predisposition",
+      "thoughts",
+      "knowledge",
+      "emotions",
+      "behavioural component",
+      "intent",
+      "observable actions"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": ".2(c)",
+    "modelAnswer": "Imagine you are a manager of a manufacturing team. Half your employees constantly look for guidance, while the other half show initiative and creativity.\n\nQuestions:\ni. If you apply only Theory X to the whole team, what will happen? (1 mark)\nii. If you apply only Theory Y, what risks might occur? (1 mark)\niii. As manager, how will you balance your leadership style between",
+    "maxMarks": 3,
+    "type": "long",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "Theory X",
+      "Theory Y",
+      "leadership style",
+      "guidance",
+      "initiative",
+      "creativity",
+      "motivation",
+      "control",
+      "responsibility",
+      "employee engagement"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": ".3 (a)",
+    "modelAnswer": "Suggest four organizational practices that can help employees with low self-esteem gain confidence.",
+    "maxMarks": 0,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "organizational practices",
+      "employees",
+      "self-esteem",
+      "confidence",
+      "support",
+      "training",
+      "mentoring",
+      "recognition"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "(b)",
+    "modelAnswer": "Create a personality profile of an ideal IT Project Manager by combining the Big Five Personality traits, Locus of Control, and key dimensions of Emotional Intelligence (EI).",
+    "maxMarks": 0,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "personality profile",
+      "IT Project Manager",
+      "Big Five Personality traits",
+      "Locus of Control",
+      "Emotional Intelligence",
+      "EI",
+      "openness",
+      "conscientiousness",
+      "extraversion",
+      "agreeableness",
+      "neuroticism"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "i.",
+    "modelAnswer": "Identify and explain two strengths that may support Trisha's success as a project manager. (1 mark)\nIf you apply only Theory X to the whole team, what will happen? (1 mark)\nTheory X assumes employees are lazy, need constant supervision, and avoid responsibility. Applying it to the entire team would demotivate the self-motivated, creative employees, stifle initiative, and reduce overall productivity.\nIdentify and explain two strengths that may support Trisha's success as a project manager. (1 mark)\n\nStrong Locus of Control (Internal): Trisha believes that her effort and planning determine project outcomes. This means she is proactive, responsible, and persistent, which is essential for meeting project goals.\n\nSelf-Awareness and Self-Regulation (Emotional Intelligence): She understands her own emotions and maintains composure under pressure, helping her make thoughtful decisions and manage stressful situations effectively.",
+    "maxMarks": 1,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "strengths",
+      "Trisha",
+      "success",
+      "project manager",
+      "structured work",
+      "innovation",
+      "locus of control",
+      "self-awareness",
+      "self-regulation",
+      "Theory X",
+      "lazy",
+      "constant supervision",
+      "responsibility",
+      "demotivate",
+      "self-motivated",
+      "creative",
+      "stifle initiative",
+      "productivity",
+      "internal",
+      "proactive",
+      "responsible",
+      "persistent",
+      "emotional intelligence",
+      "composure",
+      "stressful situations"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "ii.",
+    "modelAnswer": "Identify and explain two weaknesses that might hinder her success. (1 mark)\nIf you apply only Theory Y, what risks might occur? (1 mark)\nTheory Y assumes employees are self-motivated, responsible, and enjoy work. Applying it to the dependent employees who require guidance may lead to confusion, mistakes, and lack of discipline, as they may struggle without clear supervision.\nIdentify and explain two weaknesses that might hinder her success. (1 mark)\n\nLow Self-Esteem in Leadership: Doubting her leadership abilities and second-guessing decisions, especially under senior management scrutiny, may reduce her confidence and decisiveness, negatively affecting team trust.\n\nDifficulty in Team Networking and Conflict Management: Struggling to motivate large groups and handle conflicts can lead to team dissatisfaction, micromanagement perception, and project delays, particularly with diverse personality types on the team.",
+    "maxMarks": 1,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "weaknesses",
+      "hinder",
+      "success",
+      "networking",
+      "motivating large groups",
+      "self-esteem",
+      "conflict handling",
+      "Theory Y",
+      "self-motivated",
+      "responsible",
+      "enjoy work",
+      "dependent employees",
+      "guidance",
+      "confusion",
+      "mistakes",
+      "lack of discipline",
+      "supervision",
+      "leadership",
+      "doubting",
+      "second-guessing",
+      "confidence",
+      "decisiveness",
+      "team trust",
+      "team networking",
+      "conflict management",
+      "dissatisfaction",
+      "micromanagement",
+      "project delays",
+      "personality types"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "iii.",
+    "modelAnswer": "Based on these strengths and weaknesses, evaluate whether Trisha is likely to succeed in the long run. Support your answer with three arguments linked to the above concepts. (2 marks)\nAs manager, how will you balance your leadership style between Theory X and Y? (1 mark)\nUse an adaptive approach:\nApply Theory X management (close supervision, clear instructions) to employees who need guidance.\nApply Theory Y management (delegation, empowerment, encouragement of creativity) to self-motivated employees.\nThis approach maximizes productivity while maintaining motivation and creativity across the team.\nBased on these strengths and weaknesses, evaluate whether Trisha is likely to succeed in the long run. Support your answer with three arguments linked to the above concepts. (2 marks)\n\nProactive and Structured Approach: Her internal locus of control and preference for structured work means she takes ownership and plans effectively, which is a strong foundation for project management success.\n\nNeed for Leadership Confidence Development: Low self-esteem may limit her growth unless she builds confidence through mentorship, feedback, and small leadership wins, enabling her to make decisive and assertive choices.\n\nImportance of Enhancing Emotional Intelligence in Team Management:\nTo succeed long-term, Trisha must improve social skills and conflict management, leveraging her self-awareness to adapt leadership style to different team members' needs.\n\nVerdict: Trisha has the potential to succeed due to her planning, responsibility, and self-regulation.\nSuccess will depend on her developing confidence and interpersonal skills to manage team dynamics and gain trust.",
+    "maxMarks": 2,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "strengths",
+      "weaknesses",
+      "evaluate",
+      "Trisha",
+      "succeed",
+      "long run",
+      "arguments",
+      "personality profile",
+      "self-esteem",
+      "locus of control",
+      "emotional intelligence",
+      "manager",
+      "leadership style",
+      "Theory X",
+      "Theory Y",
+      "adaptive approach",
+      "close supervision",
+      "clear instructions",
+      "delegation",
+      "empowerment",
+      "encouragement",
+      "productivity",
+      "motivation",
+      "creativity",
+      "success",
+      "proactive",
+      "structured approach",
+      "ownership",
+      "leadership confidence",
+      "mentorship",
+      "feedback",
+      "team management",
+      "social skills",
+      "conflict management",
+      "self-awareness",
+      "team dynamics",
+      "trust"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "c",
+    "modelAnswer": "Imagine you are a manager of a manufacturing team. Half your employees constantly look for guidance, while the other half show initiative and creativity.",
+    "maxMarks": 0,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "manager",
+      "manufacturing team",
+      "guidance",
+      "initiative",
+      "creativity"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": ".3(a)",
+    "modelAnswer": "Suggest four organizational practices that can help employees with low self-esteem gain confidence.\nTraining and Skill Development: Provide workshops, on-the-job training, and mentorship programs to help employees gain competence and feel capable.\nPositive Feedback and Recognition: Regularly acknowledge achievements, effort, and improvement to reinforce self-worth.\nAssigning Challenging but Achievable Tasks: Gradually increasing responsibility helps employees experience success and build confidence.\nEncouraging Participation in Decision-Making: Involve employees in team discussions and decisions to make them feel valued and capable.\nMentoring and Coaching: Pair employees with experienced mentors who can guide, encourage, and provide constructive feedback.\nCreating a Supportive Work Environment: Promote open communication, collaboration, and psychological safety, so employees feel comfortable taking initiatives without fear of criticism.\nCelebrating Small Wins: Recognizing incremental progress helps employees see their growth and reinforces self-confidence.",
+    "maxMarks": 2,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "organizational practices",
+      "self-esteem",
+      "confidence",
+      "training",
+      "skill development",
+      "positive feedback",
+      "recognition",
+      "challenging tasks",
+      "achievable tasks",
+      "decision-making",
+      "mentoring",
+      "coaching",
+      "supportive work environment",
+      "small wins"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "b",
+    "modelAnswer": "Create a personality profile of an ideal IT Project Manager by combining the Big Five Personality traits, Locus of Control, and key dimensions of Emotional Intelligence (EI).\nPersonality Profile of an Ideal IT Project Manager",
+    "maxMarks": 4,
+    "type": "long",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "personality profile",
+      "IT Project Manager",
+      "Big Five Personality traits",
+      "Locus of Control",
+      "Emotional Intelligence (EI)"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "1",
+    "modelAnswer": "Big Five Personality Traits\nOpenness to Experience: High\nWilling to explore innovative solutions, adapt to new technologies, and\nembrace creative problem-solving.\nConscientiousness: Very High\nOrganized, dependable, detail-oriented, and capable of delivering projects\non time.\nExtraversion: Moderate to High\nEffective in communication, motivating team members, and stakeholder\nmanagement without being overly dominant.\nAgreeableness: High\nCooperative, supportive, and able to maintain positive team relationships\nwhile resolving conflicts diplomatically.\nNeuroticism (Emotional Stability): Low\nCalm under pressure, resilient to stress, and able to make rational\ndecisions in challenging situations.",
+    "maxMarks": 0,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "Big Five Personality Traits",
+      "Openness to Experience",
+      "Conscientiousness",
+      "Extraversion",
+      "Agreeableness",
+      "Neuroticism",
+      "Emotional Stability",
+      "innovative solutions",
+      "stakeholder management",
+      "team relationships",
+      "stress",
+      "rational decisions"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "2",
+    "modelAnswer": "Locus of Control\nInternal Locus of Control: High\nBelieves outcomes depend on their own actions, takes responsibility for\nproject success, and proactively addresses challenges.",
+    "maxMarks": 0,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "Locus of Control",
+      "Internal Locus of Control",
+      "outcomes",
+      "actions",
+      "responsibility",
+      "project success",
+      "challenges"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  },
+  {
+    "questionNumber": "3",
+    "modelAnswer": "Key Dimensions of Emotional Intelligence (EI)\nSelf-Awareness: Recognizes own strengths, weaknesses, and emotions\nto manage behavior effectively.\nSelf-Regulation: Maintains composure, handles stress, and responds\nthoughtfully rather than reactively.\nMotivation: Intrinsically driven to achieve goals, inspire the team, and\npursue continuous improvement.\nEmpathy: Understands team members' perspectives and needs,\nfacilitating better communication and conflict resolution.\nSocial Skills: Builds strong relationships, influences stakeholders,\nnegotiates effectively, and fosters teamwork.",
+    "maxMarks": 0,
+    "type": "short",
+    "contentTypes": [
+      "text"
+    ],
+    "keywords": [
+      "Emotional Intelligence",
+      "Self-Awareness",
+      "Self-Regulation",
+      "Motivation",
+      "Empathy",
+      "Social Skills",
+      "strengths",
+      "weaknesses",
+      "emotions",
+      "composure",
+      "stress",
+      "team members",
+      "stakeholders",
+      "teamwork"
+    ],
+    "diagramData": null,
+    "mathExpressions": []
+  }
+]

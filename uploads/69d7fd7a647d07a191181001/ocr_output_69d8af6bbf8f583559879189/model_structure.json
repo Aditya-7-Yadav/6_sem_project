@@ -1,0 +1,234 @@
+{
+  "questions": {
+    "1(a)": {
+      "text": "MotoCorp Scenario – OB Model Analysis\nScenario: MotoCorp is a manufacturing firm where managers emphasise authority, close supervision, and strict discipline. Employees enjoy job security but report low motivation and lack of creativity.\n(i) Identify and define the OB model MotoCorp is following. [1 mark]\nModel Identified: Custodial Model of Organizational Behaviour\nThis model is based on the economic resources of the organisation. Employees' security and welfare needs are fulfilled. Managers focus on providing job security and benefits, resulting in employee dependence on the organisation rather than on managerial authority alone.\n(ii) Advantages and disadvantages of this model. [1 mark]\nAdvantages:\n• Provides job security and stable employment.\n• Creates loyalty and organisational dependence.\n• Reduces resistance to authority as employees feel secure.\nDisadvantages:\n• Employees become passive and dependent → low motivation and creativity.\n• Lack of challenge and empowerment reduces innovation and initiative.\nProductivity tends to remain at a mediocre level.\n(iii) Suggest a shift to a more suitable OB model and justify your choice. [1 mark]\nRecommended Model: Supportive Model\n• Emphasises leadership, motivation, and participation rather than authority or security alone.\nEncourages employee involvement, creativity, and job satisfaction.\n• Empowering employees and valuing their contributions moves the organisation from passive cooperation to active engagement and higher productivity.",
+      "keywords": [
+        "MotoCorp",
+        "Organizational Behaviour",
+        "Custodial Model",
+        "Supportive Model",
+        "job security",
+        "employee dependence",
+        "leadership",
+        "motivation",
+        "participation",
+        "employee involvement",
+        "creativity",
+        "job satisfaction",
+        "empowerment",
+        "productivity"
+      ],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "1(b)": {
+      "text": "Define Organizational Behaviour. Explain its scope with examples.\nDefinition:\nOrganizational Behaviour (OB) is a field of study that investigates the impact that individuals, groups, and structure have on behaviour within organisations, with the purpose of applying such knowledge toward improving organisational effectiveness.",
+      "keywords": [
+        "Organizational Behaviour",
+        "individuals",
+        "groups",
+        "structure",
+        "behaviour",
+        "organizations",
+        "organizational effectiveness",
+        "impact",
+        "field of study",
+        "knowledge",
+        "application"
+      ],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "2(a)": {
+      "text": "Represent Maslow's Hierarchy of Needs with a detailed pyramid diagram.\n\nLevel\nNeed\nKey Elements\n5 (Top)\nSelf-Actualisation (Realising full potential)\nCreativity, personal growth, moral development, pursuit of meaning,\n4\nEsteem (Recognition, competence, respect)\nSelf-respect, confidence, respect from others, reputation, recognition\n3\nLove & Belonging (Social connection and acceptance)\nFamily, friendship, community, romantic relationships, group membe\n2\nSafety Needs (Security and predictability)\nPersonal security, health and wellbeing, stable environment, financia\n1 (Base)\nPhysiological Needs (Fundamental biological requirements)\nAir, water, food, shelter, clothing, sleep, reproduction\nNote: The pyramid progresses from basic physiological needs at the base to self-actualisation at the apex. Lower-level needs must be satisfied before higher-level needs become motivating.",
+      "keywords": [
+        "Maslow's Hierarchy of Needs",
+        "pyramid diagram",
+        "self-actualization",
+        "esteem",
+        "love and belonging",
+        "safety needs",
+        "physiological needs",
+        "personal growth",
+        "self-respect",
+        "family",
+        "security",
+        "air",
+        "water",
+        "food"
+      ],
+      "content_types": [
+        "text",
+        "diagram"
+      ],
+      "diagram": {
+        "description": "The diagram represents Maslow's Hierarchy of Needs as a pyramid, with five levels representing different needs, progressing from basic physiological needs at the base to self-actualization at the top. Each level is associated with specific needs and key elements.",
+        "elements": [
+          "5 (Top)",
+          "Self-Actualisation",
+          "Esteem",
+          "Love & Belonging",
+          "Safety Needs",
+          "1 (Base)",
+          "Physiological Needs"
+        ],
+        "connections": []
+      },
+      "math_expressions": [],
+      "marks": 2,
+      "type": "short"
+    },
+    "2(b)": {
+      "text": "Briefly explain the three components of attitude.\nDefinition: Attitude is a learned predisposition to respond positively or negatively toward a person, object, or situation.\n\nComponent\nDescription\nExample\nCognitive (Thinking)\nBeliefs, thoughts, or knowledge a person holds about something. \"Knowing a team increases productivity.\"\nAffective (Feeling)\nEmotions or feelings a person has toward something Feeling happy and motivated when assigned a challenging project\nBehavioural (Acting)\nIntent to act or observable actions based on beliefs and feelings participating in team discussions or offering help to collea",
+      "keywords": [
+        "attitude",
+        "learned predisposition",
+        "cognitive component",
+        "beliefs",
+        "thoughts",
+        "knowledge",
+        "affective component",
+        "emotions",
+        "feelings",
+        "behavioral component",
+        "intent to act",
+        "observable actions"
+      ],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "2(c)": {
+      "text": "Theory X and Theory Y - Manager Scenario\nScenario: You manage a manufacturing team. Half the employees constantly seek guidance; the other half show initiative and creativity.",
+      "keywords": [
+        "Theory X",
+        "Theory Y",
+        "manager",
+        "manufacturing team",
+        "guidance",
+        "initiative",
+        "creativity",
+        "employee motivation",
+        "leadership styles",
+        "employee behavior"
+      ],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "3(a)": {
+      "text": "Four organisational practices to help employees with low self-esteem gain confidence.\n\n1.  Training and Skill Development: Provide workshops, on-the-job training, and mentorship to help employees gain competence and feel capable.\n2.  Positive Feedback and Recognition: Regularly acknowledge achievements, effort, and improvement to reinforce self-worth.\n3.  Assigning Challenging but Achievable Tasks: Gradually increasing responsibility lets employees experience success and build confidence.\n4.  Encouraging Participation in Decision-Making: Involve employees in team discussions to make them feel valued and capable.\n5.  Mentoring and Coaching: Pair employees with experienced mentors who guide, encourage, and provide constructive feedback.\n6.  Creating a Supportive Work Environment: Promote open communication, collaboration, and psychological safety so employees can take initiative without fear.\n7.  Celebrating Small Wins: Recognising incremental progress helps employees see their growth and reinforces self-confidence.",
+      "keywords": [
+        "self-esteem",
+        "confidence",
+        "training",
+        "skill development",
+        "positive feedback",
+        "recognition",
+        "challenging tasks",
+        "decision-making",
+        "mentoring",
+        "coaching",
+        "supportive work environment",
+        "small wins"
+      ],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 2,
+      "type": "short"
+    },
+    "3(b)": {
+      "text": "Personality profile of an ideal IT Project Manager (Big Five + Locus of Control + El)\n\n1. Big Five Personality Traits\nCase Study: Trisha – Newly Promoted IT Project Manager at DataPulse Solutions\nScenario: Trisha (senior developer promoted to PM) prefers structured work and innovation but struggles in networking and motivating large groups. She has high internal locus of control but low leadership self-esteem. Recent project delays stemmed from team conflicts.\n(i) Identify and explain two strengths that may support Trisha's success as a Project Manager. [1 mark]\nStrength\nExplanation\nStrong Internal Locus of Control Trisha believes effort and planning determine outcomes. This makes her proactive, responsible, and per\nSelf-Awareness & Self-Regulation (EI)e understands her own emotions and maintains composure under pressure, enabling thoughtful decis\n(ii) Identify and explain two weaknesses that might hinder her success. [1 mark]",
+      "keywords": [
+        "personality profile",
+        "IT Project Manager",
+        "Big Five",
+        "Locus of Control",
+        "Emotional Intelligence",
+        "traits",
+        "project management",
+        "leadership",
+        "communication",
+        "teamwork",
+        "Trisha",
+        "Project Manager",
+        "DataPulse Solutions",
+        "strengths",
+        "weaknesses",
+        "internal locus of control",
+        "self-awareness",
+        "self-regulation",
+        "effort",
+        "planning",
+        "emotions",
+        "composure",
+        "decision-making"
+      ],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 4,
+      "type": "long"
+    },
+    "iii": {
+      "text": "Evaluate whether Trisha is likely to succeed in the long run. Support with three arguments.\nArgument 1 – Proactive and Structured Approach:\nHer internal locus of control and preference for structured work mean she takes ownership and plans effectively — a strong foundation for long-term project management success.\nArgument 2 – Leadership Confidence Must Be Developed:\nLow self-esteem may limit her growth unless she builds confidence through mentorship, positive feedback, and small leadership wins, enabling more decisive and assertive choices over time.\nArgument 3 – El Enhancement is Critical:\nTo succeed long-term, Trisha must improve social skills and conflict management, leveraging her existing self-awareness to adapt her leadership style to diverse team members' needs.\nVerdict: Trisha has the potential to succeed due to her planning ability, sense of responsibility, and self-regulation. Sustained success will depend on developing leadership confidence and interpersonal skills to manage team dynamics effectively and earn consistent trust.",
+      "keywords": [
+        "proactive",
+        "structured approach",
+        "locus of control",
+        "leadership confidence",
+        "self-esteem",
+        "mentorship",
+        "positive feedback",
+        "EI Enhancement",
+        "social skills",
+        "conflict management",
+        "self-awareness",
+        "leadership style",
+        "planning ability",
+        "self-regulation"
+      ],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 2,
+      "type": "short"
+    }
+  },
+  "question_structure": [
+    "1(a)",
+    "1(b)",
+    "2(a)",
+    "2(b)",
+    "2(c)",
+    "3(a)",
+    "3(b)",
+    "iii"
+  ],
+  "total_marks": 22
+}

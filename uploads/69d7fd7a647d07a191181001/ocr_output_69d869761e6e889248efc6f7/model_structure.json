@@ -1,0 +1,91 @@
+{
+  "questions": {
+    "1(a)": {
+      "text": "Ans 1(a):\n\ni. Identify and define the OB model MotoCorp is following:\nMotoCorp is following the Custodial Model of Organizational Behaviour.\nThis model is based on the economic resources of the organization, where employees' needs for security and welfare are fulfilled. Managers focus on providing job security and benefits, which results in employees' dependence on the organization rather than on managerial authority alone.\n\nii. Advantages and Disadvantages of this model:\nAdvantages:\nProvides job security and stable employment.\nCreates a sense of loyalty and dependence on the organization.\nReduces resistance to authority, as employees feel secure.\n\nDisadvantages:\nEmployees may feel passive and dependent, leading to low motivation and creativity.\nLack of challenge and empowerment can reduce innovation and initiative.\nProductivity may remain at a mediocre level.\n\niii. Suggest a shift to a more suitable OB model:\nMotoCorp should shift to the Supportive Model.\nThis model emphasizes leadership, motivation, and participation, rather than just authority or security.\nIt encourages employee involvement, creativity, and job satisfaction.\nBy empowering employees and valuing their contributions, the organization can move from passive cooperation to active engagement and higher productivity.",
+      "keywords": [],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "1(b)": {
+      "text": "Ans 1(b):\nDefinition: Organizational Behaviour is a field of study that investigates the impact that individuals, groups, and structure have on behaviour within organizations, for the purpose of applying such knowledge toward improving an organization's effectiveness.\n\nScope:\n\nIndividual Behaviour: Focuses on personality, perception, learning, values, attitudes, and motivation of employees.\nExample: Understanding why one employee is highly motivated while another shows apathy.\n\nGroup Behaviour: Studies group dynamics, leadership, teamwork, communication, conflict, and decision-making.\nExample: How team spirit and effective communication improve performance in a project team.\n\nOrganizational System: Examines the structure, culture, power, politics, and overall processes of the organization.\nExample: A flat organizational structure encouraging innovation versus a hierarchical structure emphasizing discipline.\n\nOrganizational Change and Development: Deals with managing change, stress, innovation, and organizational development programs.\nExample: Training employees to adapt to digital transformation initiatives.",
+      "keywords": [],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "2(a)": {
+      "text": "Ans 2(a):\nMaslow's Hierarchy of Needs (Pyramid from bottom to top):\n\nLevel 1 - Physiological Needs (Base): Air, Water, Food, Shelter, Clothing, Sleep, Reproduction. These are the fundamental biological requirements for survival.\n\nLevel 2 - Safety Needs: Personal Security, Health and Wellbeing, Stable Environment, Financial Security, Safety Nets. Relates to security and predictability in one's environment.\n\nLevel 3 - Love and Belonging Needs: Family, Friendship, Community, Romantic Relationships, Group Membership, Affection and Intimacy. Relates to social connection and acceptance.\n\nLevel 4 - Esteem Needs: Self Respect, Confidence, Respect from Others, Reputation, Recognition and Achievement. Relates to recognition, competence, and respect.\n\nLevel 5 - Self-Actualization (Top): Creativity, Personal Growth, Moral Development, Pursuit of Meaning, Purpose Driven Action, Peak Experience (joy, transcendence, insight). Relates to realising one's full potential.",
+      "keywords": [],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 2,
+      "type": "short"
+    },
+    "2(b)": {
+      "text": "Ans 2(b):\nAttitude is a learned predisposition to respond positively or negatively toward a person, object, or situation. It has three components:\n\nCognitive Component: Refers to the beliefs, thoughts, or knowledge a person has about something.\nExample: \"Working in a team increases productivity.\"\n\nAffective Component: Refers to the emotions or feelings a person has toward something.\nExample: Feeling happy and motivated when assigned a challenging project.\n\nBehavioural Component: Refers to the intent to act or observable actions based on beliefs and feelings.\nExample: Actively participating in team discussions or offering help to colleagues.",
+      "keywords": [],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "2(c)": {
+      "text": "Ans 2(c):\n\ni. If you apply only Theory X to the whole team:\nTheory X assumes employees are lazy, need constant supervision, and avoid responsibility. Applying it to the entire team would demotivate the self-motivated, creative employees, stifle initiative, and reduce overall productivity.\n\nii. If you apply only Theory Y, what risks might occur:\nTheory Y assumes employees are self-motivated, responsible, and enjoy work. Applying it to the dependent employees who require guidance may lead to confusion, mistakes, and lack of discipline, as they may struggle without clear supervision.\n\niii. How to balance leadership style between Theory X and Y:\nUse an adaptive approach:\nApply Theory X management (close supervision, clear instructions) to employees who need guidance.\nApply Theory Y management (delegation, empowerment, encouragement of creativity) to self-motivated employees.\nThis approach maximizes productivity while maintaining motivation and creativity across the team.",
+      "keywords": [],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 3,
+      "type": "long"
+    },
+    "3(a)": {
+      "text": "Ans 3(a):\nFour organizational practices that can help employees with low self-esteem gain confidence:\n\nTraining and Skill Development: Provide workshops, on-the-job training, and mentorship programs to help employees gain competence and feel capable.\n\nPositive Feedback and Recognition: Regularly acknowledge achievements, effort, and improvement to reinforce self-worth.\n\nAssigning Challenging but Achievable Tasks: Gradually increasing responsibility helps employees experience success and build confidence.\n\nEncouraging Participation in Decision-Making: Involve employees in team discussions and decisions to make them feel valued and capable.",
+      "keywords": [],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 2,
+      "type": "short"
+    },
+    "3(b)": {
+      "text": "Ans 3(b):\nPersonality Profile of an Ideal IT Project Manager\n\n1. Big Five Personality Traits:\n\nOpenness to Experience: High\nWilling to explore innovative solutions, adapt to new technologies, and embrace creative problem-solving.\n\nConscientiousness: Very High\nOrganized, dependable, detail-oriented, and capable of delivering projects on time.\n\nExtraversion: Moderate to High\nEffective in communication, motivating team members, and stakeholder management without being overly dominant.\n\nAgreeableness: High\nCooperative, supportive, and able to maintain positive team relationships while resolving conflicts diplomatically.\n\nNeuroticism (Emotional Stability): Low\nCalm under pressure, resilient to stress, and able to make rational decisions in challenging situations.\n\n2. Locus of Control:\nInternal Locus of Control: High\nBelieves outcomes depend on their own actions, takes responsibility for project success, and proactively addresses challenges.\n\n3. Key Dimensions of Emotional Intelligence (EI):\n\nSelf-Awareness: Recognizes own strengths, weaknesses, and emotions to manage behavior effectively.\nSelf-Regulation: Maintains composure, handles stress, and responds thoughtfully rather than reactively.\nMotivation: Intrinsically driven to achieve goals, inspire the team, and pursue continuous improvement.\nEmpathy: Understands team members' perspectives and needs, facilitating better communication and conflict resolution.\nSocial Skills: Builds strong relationships, influences stakeholders, negotiates effectively, and fosters teamwork.\n\nSummary:\nAn ideal IT Project Manager is organized, adaptable, and responsible, maintains emotional stability under pressure, communicates effectively, motivates the team, and takes proactive control of project outcomes while showing empathy and collaborative leadership.\n\n\nQ3(b) OR. [4]\n\nAns 3(b) OR - DataPulse Solutions / Trisha Case Study:\n\ni. Two strengths that may support Trisha's success as a project manager:\n\nStrong Locus of Control (Internal): Trisha believes that her effort and planning determine project outcomes. This means she is proactive, responsible, and persistent, which is essential for meeting project goals.\n\nSelf-Awareness and Self-Regulation (Emotional Intelligence): She understands her own emotions and maintains composure under pressure, helping her make thoughtful decisions and manage stressful situations effectively.\n\nii. Two weaknesses that might hinder her success:\n\nLow Self-Esteem in Leadership: Doubting her leadership abilities and second-guessing decisions, especially under senior management scrutiny, may reduce her confidence and decisiveness, negatively affecting team trust.\n\nDifficulty in Team Networking and Conflict Management: Struggling to motivate large groups and handle conflicts can lead to team dissatisfaction, micromanagement perception, and project delays, particularly with diverse personality types on the team.\n\niii. Evaluation of whether Trisha is likely to succeed in the long run:\n\nProactive and Structured Approach: Her internal locus of control and preference for structured work means she takes ownership and plans effectively, which is a strong foundation for project management success.\n\nNeed for Leadership Confidence Development: Low self-esteem may limit her growth unless she builds confidence through mentorship, feedback, and small leadership wins, enabling her to make decisive and assertive choices.\n\nImportance of Enhancing Emotional Intelligence in Team Management: To succeed long-term, Trisha must improve social skills and conflict management, leveraging her self-awareness to adapt leadership style to different team members' needs.\n\nVerdict: Trisha has the potential to succeed due to her planning, responsibility, and self-regulation. Success will depend on her developing confidence and interpersonal skills to manage team dynamics and gain trust.",
+      "keywords": [],
+      "content_types": [
+        "text"
+      ],
+      "diagram": null,
+      "math_expressions": [],
+      "marks": 4,
+      "type": "long"
+    }
+  },
+  "question_structure": [
+    "1(a)",
+    "1(b)",
+    "2(a)",
+    "2(b)",
+    "2(c)",
+    "3(a)",
+    "3(b)"
+  ],
+  "total_marks": 20
+}
