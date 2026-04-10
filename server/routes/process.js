@@ -5,7 +5,7 @@ const authMiddleware = require('../middleware/auth');
 const Submission = require('../models/Submission');
 const Result = require('../models/Result');
 const EvalSet = require('../models/EvalSet');
-const { runOCR, runGrader } = require('../services/pythonBridge');
+const { runOCR, runGrader, runSegmentation } = require('../services/pythonBridge');
 
 const router = express.Router();
 
@@ -201,7 +201,11 @@ router.get('/:submissionId/status', authMiddleware, async (req, res) => {
 
 /**
  * Background processing pipeline:
- * OCR → Parse → Match → Classify → Grade → Aggregate → Store
+ * OCR → Segment → Align → Grade → Aggregate → Store
+ * 
+ * If enhanced model answer data is available (with contentTypes, keywords, diagramData),
+ * uses the Python-based segmentation engine for intelligent question mapping.
+ * Otherwise falls back to the legacy matchAnswers approach.
  */
 async function processSubmission(submission) {
   try {
@@ -212,12 +216,19 @@ async function processSubmission(submission) {
 
     // Get model answers — either from EvalSet or from submission itself
     let parsedModelAnswers = submission.parsedModelAnswers;
+    let modelStructure = null;
+    let pipelineMode = 'legacy';
 
     if (submission.setId) {
       const evalSet = await EvalSet.findById(submission.setId);
       if (evalSet && evalSet.parsedModelAnswers.length > 0) {
         parsedModelAnswers = evalSet.parsedModelAnswers;
+        modelStructure = evalSet.modelStructure;
         console.log(`[Pipeline] Using model answers from set: ${evalSet.setName}`);
+        console.log(`[Pipeline] Processing mode: ${evalSet.processingMode || 'regex'}`);
+        if (evalSet.processingMode && evalSet.processingMode !== 'regex') {
+          pipelineMode = 'enhanced';
+        }
       }
     }
 
@@ -225,7 +236,18 @@ async function processSubmission(submission) {
       throw new Error('No model answers available for grading');
     }
 
+    // Check if we have enriched model answer data
+    const hasEnrichedData = parsedModelAnswers.some(
+      ma => (ma.contentTypes && ma.contentTypes.length > 0) ||
+            (ma.keywords && ma.keywords.length > 0)
+    );
+    if (hasEnrichedData) {
+      pipelineMode = 'enhanced';
+      console.log(`[Pipeline] Enriched model answer data detected — using enhanced pipeline`);
+    }
+
     console.log(`[Pipeline] Model answers: ${parsedModelAnswers.length} questions`);
+    console.log(`[Pipeline] Pipeline mode: ${pipelineMode}`);
 
     // Step 1: OCR
     console.log('[Pipeline] Step 1: Running OCR...');
@@ -266,58 +288,76 @@ async function processSubmission(submission) {
       await submission.save();
     }
 
-    // Step 2: Match student answers to model answers
-    console.log('[Pipeline] Step 2: Matching answers...');
-    const matchedPairs = matchAnswers(
-      submission.structuredAnswers,
-      parsedModelAnswers
-    );
+    // Step 2: Segmentation + Alignment (or legacy matching)
+    let gradingInput;
+    let alignmentSummary = null;
 
-    console.log(`[Pipeline] Matched ${matchedPairs.length} question pairs`);
+    if (pipelineMode === 'enhanced') {
+      console.log('[Pipeline] Step 2: Running enhanced segmentation + alignment...');
+      try {
+        gradingInput = await runEnhancedSegmentation(
+          ocrResult, parsedModelAnswers, modelStructure, outputDir
+        );
+        alignmentSummary = gradingInput._alignmentSummary;
+        delete gradingInput._alignmentSummary;
+        gradingInput = gradingInput.items;
+        console.log(`[Pipeline] Enhanced segmentation: ${gradingInput.length} grading pairs`);
+      } catch (segErr) {
+        console.error('[Pipeline] Enhanced segmentation failed, falling back to legacy:', segErr.message);
+        pipelineMode = 'legacy';
+        gradingInput = buildLegacyGradingInput(submission.structuredAnswers, parsedModelAnswers);
+      }
+    } else {
+      console.log('[Pipeline] Step 2: Legacy answer matching...');
+      gradingInput = buildLegacyGradingInput(submission.structuredAnswers, parsedModelAnswers);
+    }
 
-    // Step 3: Prepare grading input
+    console.log(`[Pipeline] ${gradingInput.length} question pairs ready for grading`);
+
+    // Step 3: Run grader
     console.log('[Pipeline] Step 3: Grading answers...');
-    const gradingInput = matchedPairs.map(pair => ({
-      question_number: pair.questionNumber,
-      type: pair.type,
-      student_answer: pair.studentAnswer,
-      model_answer: pair.modelAnswer,
-      max_marks: pair.maxMarks
-    }));
-
-    // Step 4: Run grader
     let gradingResults;
     try {
       gradingResults = await runGrader(gradingInput);
     } catch (graderError) {
       console.error('[Pipeline] Grader error:', graderError.message);
       // Fallback: assign 0 marks with error
-      gradingResults = matchedPairs.map(pair => ({
-        question_number: pair.questionNumber,
+      gradingResults = gradingInput.map(pair => ({
+        question_number: pair.question_number,
         marks_awarded: 0,
-        max_marks: pair.maxMarks,
+        max_marks: pair.max_marks,
         final_score: 0,
         details: {},
+        diagram_score: null,
+        math_score: null,
+        feedback: 'Grading failed: ' + graderError.message,
+        content_types_evaluated: [],
         error: graderError.message
       }));
     }
 
-    // Step 5: Aggregate results
-    console.log('[Pipeline] Step 5: Aggregating results...');
+    // Step 4: Aggregate results
+    console.log('[Pipeline] Step 4: Aggregating results...');
 
-    const questions = matchedPairs.map((pair, idx) => {
+    const questions = gradingInput.map((pair, idx) => {
       const gradeResult = gradingResults[idx] || {};
 
       return {
-        questionNumber: pair.questionNumber,
-        studentAnswer: pair.studentAnswer,
-        modelAnswer: pair.modelAnswer,
+        questionNumber: pair.question_number,
+        studentAnswer: pair.student_answer,
+        modelAnswer: pair.model_answer,
         type: pair.type,
-        maxMarks: pair.maxMarks,
+        maxMarks: pair.max_marks,
         marksAwarded: gradeResult.marks_awarded || 0,
         finalScore: gradeResult.final_score || 0,
         details: gradeResult.details || {},
-        feedback: generateFeedback(gradeResult, pair.type)
+        feedback: gradeResult.feedback || generateFeedback(gradeResult, pair.type),
+        // Enhanced multimodal fields
+        contentTypes: pair.content_types || ['text'],
+        diagramScore: gradeResult.diagram_score ?? null,
+        mathScore: gradeResult.math_score ?? null,
+        alignmentConfidence: pair.alignment_confidence ?? null,
+        contentTypesEvaluated: gradeResult.content_types_evaluated || []
       };
     });
 
@@ -325,14 +365,16 @@ async function processSubmission(submission) {
     const totalMaxMarks = questions.reduce((sum, q) => sum + q.maxMarks, 0);
     const percentage = totalMaxMarks > 0 ? Math.round((totalMarksAwarded / totalMaxMarks) * 100) : 0;
 
-    // Step 6: Store result
+    // Step 5: Store result
     const resultData = {
       submissionId: submission._id,
       userId: submission.userId,
       questions,
       totalMarksAwarded,
       totalMaxMarks,
-      percentage
+      percentage,
+      pipelineMode,
+      alignmentSummary
     };
 
     // Add set and student info if available
@@ -351,6 +393,7 @@ async function processSubmission(submission) {
 
     console.log(`[Pipeline] ================================`);
     console.log(`[Pipeline] Completed. Score: ${totalMarksAwarded}/${totalMaxMarks} (${percentage}%)`);
+    console.log(`[Pipeline] Pipeline mode: ${pipelineMode}`);
 
   } catch (error) {
     console.error(`[Pipeline] Failed for submission ${submission._id}:`, error);
@@ -359,5 +402,85 @@ async function processSubmission(submission) {
     await submission.save();
   }
 }
+
+
+/**
+ * Run enhanced segmentation + alignment pipeline.
+ * Writes OCR result and model structure to temp files, calls Python segmentation engine.
+ */
+async function runEnhancedSegmentation(ocrResult, parsedModelAnswers, modelStructure, outputDir) {
+  // Build model structure if not already available
+  if (!modelStructure) {
+    modelStructure = {
+      questions: {},
+      question_structure: [],
+      total_marks: 0
+    };
+
+    for (const ma of parsedModelAnswers) {
+      const qNum = ma.questionNumber;
+      modelStructure.questions[qNum] = {
+        text: ma.modelAnswer,
+        keywords: ma.keywords || [],
+        content_types: ma.contentTypes || ['text'],
+        diagram: ma.diagramData || null,
+        math_expressions: ma.mathExpressions || [],
+        marks: ma.maxMarks,
+        type: ma.type
+      };
+      modelStructure.question_structure.push(qNum);
+      modelStructure.total_marks += (ma.maxMarks || 0);
+    }
+  }
+
+  // Write temp files for Python bridge
+  const ocrResultPath = path.join(outputDir, 'student_ocr.json');
+  const modelStructPath = path.join(outputDir, 'model_structure.json');
+
+  fs.writeFileSync(ocrResultPath, JSON.stringify(ocrResult, null, 2));
+  fs.writeFileSync(modelStructPath, JSON.stringify(modelStructure, null, 2));
+
+  // Run segmentation
+  const segResult = await runSegmentation(ocrResultPath, modelStructPath, outputDir);
+
+  // Convert to grading input format
+  const gradingPairs = (segResult.grading_input || []).map(gi => ({
+    question_number: gi.question_number,
+    type: gi.type,
+    student_answer: gi.student_answer,
+    model_answer: gi.model_answer,
+    max_marks: gi.max_marks,
+    keywords: gi.keywords,
+    content_types: gi.content_types,
+    diagram_data: gi.diagram_data,
+    math_expressions: gi.math_expressions,
+    alignment_confidence: gi.alignment_confidence
+  }));
+
+  return {
+    items: gradingPairs,
+    _alignmentSummary: segResult.alignment?.summary || null
+  };
+}
+
+
+/**
+ * Build grading input from legacy matchAnswers pathway.
+ * Used when model answer is .txt or enhanced segmentation is unavailable.
+ */
+function buildLegacyGradingInput(structuredAnswers, parsedModelAnswers) {
+  const matchedPairs = matchAnswers(structuredAnswers, parsedModelAnswers);
+
+  return matchedPairs.map(pair => ({
+    question_number: pair.questionNumber,
+    type: pair.type,
+    student_answer: pair.studentAnswer,
+    model_answer: pair.modelAnswer,
+    max_marks: pair.maxMarks,
+    content_types: pair.contentTypes || ['text'],
+    keywords: pair.keywords || {}
+  }));
+}
+
 
 module.exports = router;

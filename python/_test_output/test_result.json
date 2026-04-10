@@ -1,9 +1,9 @@
 {
-  "full_text": "UNIVERSITY EXAMINATION\nName: Rahul Sharma\nRoll Number: 21CSE045\nDate: 15/03/2025\nBranch: Computer Science (SE)\nSubject Code: CS-401\nQ1. What is an operating system?\nAns: An operating system is system software that\nmanages computer hardware, software resources, and\nprovides common services for computer programs.\nQ2. Explain process scheduling.\nAns: Process scheduling is the activity of the\nprocess manager that handles the removal of the\nrunning process from the CPU and the selection\nof another process based on a scheduling algorithm.\nQ3. Draw a process state diagram:\nReady\nRunning\nWaiting",
+  "full_text": "UNIVERSITY EXAMINATION\nName: Rahul Sharma\nRoll Number: 21CSE045\nDate: 15/03/2025\nBranch: Computer Science (SE)\nSubject Code: CS-401\nQ1. What is an operating system?\nAns: An operating system is system software that\nmanages computer hardware, software resources, and\nprovides common services for computer programs.\nQ2. Explain process scheduling.\nAns: Process scheduling is the activity of the\nprocess manager that handles the removal of the\nrunning process from the CPU and the selection\nof another process based on a scheduling algorithm.\nQ3. Draw a process state diagram:\nReady\nRunning\nWaiting\n\n[DIAGRAM]: A process state diagram showing Ready, Running, and Waiting states.\nReady, Running, Waiting",
   "pages": [
     {
       "page_number": 1,
-      "text": "UNIVERSITY EXAMINATION\nName: Rahul Sharma\nRoll Number: 21CSE045\nDate: 15/03/2025\nBranch: Computer Science (SE)\nSubject Code: CS-401\nQ1. What is an operating system?\nAns: An operating system is system software that\nmanages computer hardware, software resources, and\nprovides common services for computer programs.\nQ2. Explain process scheduling.\nAns: Process scheduling is the activity of the\nprocess manager that handles the removal of the\nrunning process from the CPU and the selection\nof another process based on a scheduling algorithm.\nQ3. Draw a process state diagram:\nReady\nRunning\nWaiting"
+      "text": "UNIVERSITY EXAMINATION\nName: Rahul Sharma\nRoll Number: 21CSE045\nDate: 15/03/2025\nBranch: Computer Science (SE)\nSubject Code: CS-401\nQ1. What is an operating system?\nAns: An operating system is system software that\nmanages computer hardware, software resources, and\nprovides common services for computer programs.\nQ2. Explain process scheduling.\nAns: Process scheduling is the activity of the\nprocess manager that handles the removal of the\nrunning process from the CPU and the selection\nof another process based on a scheduling algorithm.\nQ3. Draw a process state diagram:\nReady\nRunning\nWaiting\n\n[DIAGRAM]: A process state diagram showing Ready, Running, and Waiting states.\nReady, Running, Waiting"
     }
   ],
   "structured_answers": [
@@ -23,20 +23,36 @@
       "question_number": "3",
       "subtype": "",
       "question_text": "",
-      "answer_text": "Draw a process state diagram:\nReady\nRunning\nWaiting"
+      "answer_text": "Draw a process state diagram:\nReady\nRunning\nWaiting\n\n[DIAGRAM]: A process state diagram showing Ready, Running, and Waiting states.\nReady, Running, Waiting"
     }
   ],
   "student_info": {
-    "name": "",
-    "roll_number": "",
-    "exam_date": "",
-    "branch": "",
-    "paper_code": ""
+    "name": "Rahul Sharma",
+    "roll_number": "21CSE045",
+    "exam_date": "15/03/2025",
+    "branch": "Computer Science (CSE)",
+    "paper_code": "CS-401"
   },
   "content_analysis": [
     {
       "page_number": 1,
-      "content_blocks": []
+      "content_blocks": [
+        {
+          "type": "text",
+          "description": "Question 1 and its answer defining an operating system.",
+          "extracted_data": "Q1. What is an operating system?\nAns: An operating system is system software that manages computer hardware, software resources, and provides common services for computer programs."
+        },
+        {
+          "type": "text",
+          "description": "Question 2 and its answer explaining process scheduling.",
+          "extracted_data": "Q2. Explain process scheduling.\nAns: Process scheduling is the activity of the process manager that handles the removal of the running process from the CPU and the selection of another process based on a scheduling algorithm."
+        },
+        {
+          "type": "diagram",
+          "description": "A process state diagram showing Ready, Running, and Waiting states.",
+          "extracted_data": "Ready, Running, Waiting"
+        }
+      ]
     }
   ],
   "pipeline_mode": "hybrid"

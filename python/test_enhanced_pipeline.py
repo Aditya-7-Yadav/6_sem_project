@@ -5,6 +5,14 @@ Test Script for Enhanced OCR Pipeline
 Verifies that all modules import correctly, Gemini API connectivity works,
 and the pipeline produces valid output.
 
+Now includes tests for:
+  - Model Answer Processor
+  - Segmentation Engine
+  - Alignment Engine
+  - Math Evaluator
+  - Diagram Evaluator
+  - Full integration test
+
 Usage:
     cd python/
     python test_enhanced_pipeline.py
@@ -60,6 +68,11 @@ def test_imports():
         ("ocr.hybrid_extractor", "Hybrid extractor"),
         ("ocr.gemini_evaluator", "Gemini evaluator"),
         ("ocr.enhanced_ocr_pipeline", "Enhanced pipeline"),
+        ("ocr.model_answer_processor", "Model answer processor"),
+        ("ocr.segmentation_engine", "Segmentation engine"),
+        ("ocr.alignment_engine", "Alignment engine"),
+        ("ocr.diagram_evaluator", "Diagram evaluator"),
+        ("ocr.math_evaluator", "Math evaluator"),
     ]
 
     for module_name, display_name in modules:
@@ -101,6 +114,13 @@ def test_environment():
         ok(f"OCR_API_KEY is set ({len(ocr_key)} chars)")
     else:
         warn("OCR_API_KEY not set (will use hardcoded default in ocr_service.py)")
+
+    # Check SymPy
+    try:
+        import sympy
+        ok(f"SymPy available (v{sympy.__version__})")
+    except ImportError:
+        warn("SymPy not installed — math evaluator will use Gemini fallback")
 
     return all_passed
 
@@ -308,6 +328,311 @@ def test_evaluator():
         return False
 
 
+# ===================== TEST 7: Model Answer Processor =====================
+def test_model_answer_processor():
+    print(f"\n{BOLD}Test 6: Model Answer Processor{RESET}")
+
+    try:
+        from ocr.model_answer_processor import (
+            parse_model_answer_text_regex, extract_keywords, to_legacy_format
+        )
+
+        # Test regex parsing with a synthetic model answer
+        model_text = """
+Q1(a) [3 marks]
+An operating system is system software that manages computer hardware,
+software resources, and provides common services for computer programs.
+Key concepts: resource management, process scheduling, memory management.
+
+Q1(b) [5 marks]
+Process scheduling is the activity of the process manager that handles
+the removal of the running process from the CPU and the selection of
+another process based on a particular strategy. Types include FCFS,
+SJF, Round Robin, Priority scheduling.
+
+Q2 [4 marks]
+Calculate the throughput of the system using: throughput = processes / time.
+Given 10 processes in 5 seconds, throughput = 10/5 = 2 processes/second.
+"""
+
+        questions = parse_model_answer_text_regex(model_text)
+
+        assert len(questions) >= 3, f"Expected ≥3 questions, got {len(questions)}"
+        ok(f"Regex parser extracted {len(questions)} questions")
+
+        # Check question content
+        for q_num, q_data in questions.items():
+            info(f"  Q{q_num}: {q_data['marks']} marks, type={q_data['type']}, "
+                 f"content={q_data['content_types']}, keywords={len(q_data['keywords'])}")
+
+        # Test keyword extraction
+        keywords = extract_keywords(
+            "Operating system manages hardware resources processes memory scheduling"
+        )
+        assert len(keywords) > 0, "Should extract at least some keywords"
+        ok(f"Keyword extraction: {keywords[:5]}")
+
+        # Test legacy format conversion
+        model_result = {
+            "questions": questions,
+            "total_marks": sum(q["marks"] for q in questions.values()),
+            "question_structure": list(questions.keys())
+        }
+        legacy = to_legacy_format(model_result)
+        assert len(legacy) == len(questions), "Legacy format should have same number of questions"
+        assert "questionNumber" in legacy[0], "Legacy format should have 'questionNumber' field"
+        assert "contentTypes" in legacy[0], "Legacy format should have 'contentTypes' field"
+        assert "keywords" in legacy[0], "Legacy format should have 'keywords' field"
+        ok("Legacy format conversion works correctly")
+
+        return True
+
+    except Exception as e:
+        fail(f"Model answer processor test failed: {e}")
+        traceback.print_exc()
+        return False
+
+
+# ===================== TEST 8: Segmentation Engine =====================
+def test_segmentation_engine():
+    print(f"\n{BOLD}Test 7: Segmentation Engine{RESET}")
+
+    try:
+        from ocr.segmentation_engine import segment_student_answers, normalize_question_number
+
+        # Test question number normalization
+        assert normalize_question_number("Q1(a)") == "1(a)"
+        assert normalize_question_number("Ans 2") == "2"
+        assert normalize_question_number("  q 3 (b)  ") == "3(b)"
+        ok("Question number normalization works")
+
+        # Test segmentation with mock data
+        student_text = """
+Q1. An operating system manages hardware and software resources.
+It provides an interface between users and computer hardware.
+
+Q2. Process scheduling handles CPU allocation among processes.
+Common algorithms include FCFS, SJF, and Round Robin.
+Priority scheduling assigns priorities to each process.
+
+Ans 3. Memory management involves allocation and deallocation
+of memory blocks to programs. It uses paging and segmentation.
+"""
+
+        model_structure = {
+            "questions": {
+                "1": {"text": "An OS is system software that manages hardware...", "marks": 3, "type": "short"},
+                "2": {"text": "Process scheduling manages CPU allocation...", "marks": 5, "type": "long"},
+                "3": {"text": "Memory management handles allocation...", "marks": 4, "type": "long"},
+            },
+            "question_structure": ["1", "2", "3"]
+        }
+
+        result = segment_student_answers(student_text, model_structure)
+
+        assert "segments" in result, "Missing 'segments' key"
+        assert "strategy_used" in result, "Missing 'strategy_used' key"
+        ok(f"Segmentation strategy: {result['strategy_used']}")
+
+        matched = sum(1 for s in result["segments"].values() if s["text"])
+        total = len(result["segments"])
+        ok(f"Matched {matched}/{total} questions")
+
+        for q_num, seg in result["segments"].items():
+            text_preview = seg["text"][:50] + "..." if len(seg["text"]) > 50 else seg["text"]
+            info(f"  Q{q_num}: confidence={seg['confidence']:.2f}, "
+                 f"source={seg['source']}, text='{text_preview}'")
+
+        assert matched >= 2, f"Should match at least 2/3 questions, got {matched}"
+        return True
+
+    except Exception as e:
+        fail(f"Segmentation engine test failed: {e}")
+        traceback.print_exc()
+        return False
+
+
+# ===================== TEST 9: Alignment Engine =====================
+def test_alignment_engine():
+    print(f"\n{BOLD}Test 8: Alignment Engine{RESET}")
+
+    try:
+        from ocr.alignment_engine import align_answers, to_grading_input
+
+        student_segments = {
+            "segments": {
+                "1": {"text": "An OS manages hardware", "confidence": 0.9, "source": "regex"},
+                "2": {"text": "Scheduling allocates CPU time", "confidence": 0.8, "source": "regex"},
+                "3": {"text": "", "confidence": 0.0, "source": "regex"},
+            },
+            "strategy_used": "regex"
+        }
+
+        model_structure = {
+            "questions": {
+                "1": {
+                    "text": "An operating system manages hardware",
+                    "keywords": ["operating system", "hardware", "software"],
+                    "content_types": ["text"],
+                    "marks": 3,
+                    "type": "short"
+                },
+                "2": {
+                    "text": "Process scheduling handles CPU allocation",
+                    "keywords": ["scheduling", "CPU", "process"],
+                    "content_types": ["text"],
+                    "marks": 5,
+                    "type": "long"
+                },
+                "3": {
+                    "text": "Memory management handles allocation",
+                    "keywords": ["memory", "allocation", "paging"],
+                    "content_types": ["text", "diagram"],
+                    "diagram": {"description": "Memory layout diagram", "elements": ["heap", "stack"]},
+                    "marks": 4,
+                    "type": "long"
+                },
+            },
+            "question_structure": ["1", "2", "3"]
+        }
+
+        result = align_answers(student_segments, model_structure)
+
+        assert "aligned_pairs" in result, "Missing 'aligned_pairs'"
+        assert "summary" in result, "Missing 'summary'"
+        ok(f"Alignment produced {len(result['aligned_pairs'])} pairs")
+
+        summary = result["summary"]
+        info(f"  Matched: {summary['matched_questions']}/{summary['total_questions']}")
+        info(f"  High confidence: {summary['high_confidence']}")
+        info(f"  Low confidence: {summary['low_confidence']}")
+        info(f"  Unmatched: {summary['unmatched']}")
+        info(f"  Overall confidence: {summary['overall_confidence']}")
+
+        # Test grading input conversion
+        grading_input = to_grading_input(result)
+        assert len(grading_input) == 3, "Should have 3 grading inputs"
+        assert "content_types" in grading_input[0], "Should have content_types"
+        assert "diagram_data" in grading_input[2], "Q3 should have diagram_data"
+        ok("Grading input conversion works correctly")
+
+        return True
+
+    except Exception as e:
+        fail(f"Alignment engine test failed: {e}")
+        traceback.print_exc()
+        return False
+
+
+# ===================== TEST 10: Math Evaluator =====================
+def test_math_evaluator():
+    print(f"\n{BOLD}Test 9: Math Evaluator{RESET}")
+
+    try:
+        from ocr.math_evaluator import evaluate_math, SYMPY_AVAILABLE
+
+        info(f"SymPy available: {SYMPY_AVAILABLE}")
+
+        # Test with a numerical comparison
+        result = evaluate_math(
+            student_answer="throughput = 10/5 = 2 processes/second",
+            model_answer="throughput = processes/time = 10/5 = 2 processes/second",
+            model_expressions=["10/5 = 2"],
+            max_marks=4,
+            question_number="test"
+        )
+
+        ok(f"Math evaluation: {result['marks_awarded']}/{result['max_marks']} "
+           f"(score={result['math_score']}, type={result['evaluation_type']})")
+        info(f"  Reason: {result.get('reason', 'N/A')}")
+
+        assert result["marks_awarded"] >= 0, "Marks should be non-negative"
+        assert result["max_marks"] == 4, "Max marks should be 4"
+        assert "math_score" in result, "Should have math_score"
+
+        # Test with wrong answer
+        wrong_result = evaluate_math(
+            student_answer="throughput = 10/5 = 3",
+            model_answer="throughput = 10/5 = 2",
+            max_marks=4,
+            question_number="test_wrong"
+        )
+        info(f"  Wrong answer result: {wrong_result['marks_awarded']}/{wrong_result['max_marks']}")
+
+        # Test with empty answer
+        empty_result = evaluate_math(
+            student_answer="",
+            model_answer="x = 5",
+            max_marks=4,
+            question_number="test_empty"
+        )
+        assert empty_result["marks_awarded"] == 0, "Empty answer should get 0 marks"
+        ok("Empty answer correctly gets 0 marks")
+
+        return True
+
+    except Exception as e:
+        fail(f"Math evaluator test failed: {e}")
+        traceback.print_exc()
+        return False
+
+
+# ===================== TEST 11: Diagram Evaluator =====================
+def test_diagram_evaluator():
+    print(f"\n{BOLD}Test 10: Diagram Evaluator{RESET}")
+
+    try:
+        from ocr.diagram_evaluator import evaluate_diagram
+
+        # Test with no image (should return fallback result)
+        result = evaluate_diagram(
+            image_path="/nonexistent/path.jpg",
+            model_diagram_data={
+                "description": "Process state diagram",
+                "elements": ["Ready", "Running", "Waiting"],
+                "connections": [["Ready", "Running"], ["Running", "Waiting"]]
+            },
+            model_text="Process state transition diagram",
+            max_marks=5,
+            question_number="test"
+        )
+
+        assert "marks_awarded" in result, "Should have marks_awarded"
+        assert "diagram_score" in result, "Should have diagram_score"
+        ok(f"No-image fallback: {result['marks_awarded']}/{result['max_marks']} "
+           f"(type={result['evaluation_type']})")
+
+        # Test with actual test image if available
+        test_dir = os.path.join(SCRIPT_DIR, "_test_output")
+        test_img = os.path.join(test_dir, "test_answer_sheet.jpg")
+        if os.path.exists(test_img):
+            from ocr.gemini_client import GEMINI_AVAILABLE
+            if GEMINI_AVAILABLE:
+                real_result = evaluate_diagram(
+                    image_path=test_img,
+                    model_diagram_data={
+                        "description": "Process state diagram with Ready, Running, Waiting states",
+                        "elements": ["Ready", "Running", "Waiting"],
+                        "connections": [["Ready", "Running"], ["Running", "Waiting"]]
+                    },
+                    max_marks=5,
+                    question_number="test_real"
+                )
+                ok(f"Real image eval: {real_result['marks_awarded']}/{real_result['max_marks']} "
+                   f"(type={real_result['evaluation_type']})")
+            else:
+                warn("Gemini not available, skipping real image diagram test")
+        else:
+            warn("Test image not available, skipping real diagram evaluation")
+
+        return True
+
+    except Exception as e:
+        fail(f"Diagram evaluator test failed: {e}")
+        traceback.print_exc()
+        return False
+
+
 # ===================== MAIN =====================
 if __name__ == "__main__":
     import argparse
@@ -328,6 +653,11 @@ if __name__ == "__main__":
     results["gemini_api"] = test_gemini_connectivity()
     results["pipeline"] = test_pipeline_with_image(args.input)
     results["evaluator"] = test_evaluator()
+    results["model_answer_processor"] = test_model_answer_processor()
+    results["segmentation_engine"] = test_segmentation_engine()
+    results["alignment_engine"] = test_alignment_engine()
+    results["math_evaluator"] = test_math_evaluator()
+    results["diagram_evaluator"] = test_diagram_evaluator()
 
     # Summary
     print(f"\n{BOLD}{'='*60}")
@@ -350,3 +680,4 @@ if __name__ == "__main__":
     else:
         print(f"\n  {GREEN}All tests passed! Pipeline is ready.{RESET}")
         sys.exit(0)
+

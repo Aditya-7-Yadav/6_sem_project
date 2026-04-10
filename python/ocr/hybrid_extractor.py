@@ -19,6 +19,7 @@ import os
 import sys
 
 from .gemini_client import log
+from .gemini_output_cleaner import clean_gemini_artifacts
 
 
 def merge_page_results(ocr_text, classification_result, page_number=1):
@@ -56,6 +57,8 @@ def merge_page_results(ocr_text, classification_result, page_number=1):
 
     # --------------- Build merged text ---------------
     merged_text = _build_merged_text(ocr_text, content_blocks)
+    # Clean Gemini artifacts (remove pollution tags) before further processing
+    merged_text = clean_gemini_artifacts(merged_text)
 
     # --------------- Enrich content blocks ---------------
     enriched_blocks = _enrich_blocks(ocr_text, content_blocks)

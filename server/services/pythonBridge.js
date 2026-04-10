@@ -10,6 +10,8 @@ const OCR_TIMEOUT_MS = 300_000;
 // Timeout for grader process
 // 5 minutes — models take time to load on first request
 const GRADER_TIMEOUT_MS = 300_000;
+// Timeout for model answer processing
+const MODEL_PROC_TIMEOUT_MS = 300_000;
 
 /**
  * Normalize a file path for cross-platform compatibility.
@@ -219,4 +221,99 @@ function runGrader(questions) {
   });
 }
 
-module.exports = { runOCR, runGrader };
+
+/**
+ * Run the segmentation + alignment engine.
+ * Takes student OCR result and model structure, outputs aligned grading pairs.
+ * 
+ * @param {string} ocrResultPath - Path to the student OCR result JSON file
+ * @param {string} modelStructurePath - Path to the model structure JSON file
+ * @param {string} outputDir - Directory for output files
+ * @returns {Promise<object>} - Segmentation + alignment result
+ */
+function runSegmentation(ocrResultPath, modelStructurePath, outputDir) {
+  return new Promise((resolve, reject) => {
+    const scriptPath = path.join(PYTHON_DIR, 'ocr', 'enhanced_ocr_pipeline.py');
+
+    console.log('[Segment Bridge] ================================');
+    console.log('[Segment Bridge] Starting segmentation + alignment');
+    console.log('[Segment Bridge] OCR result:', ocrResultPath);
+    console.log('[Segment Bridge] Model structure:', modelStructurePath);
+
+    fs.mkdirSync(outputDir, { recursive: true });
+
+    const proc = spawn(PYTHON_PATH, [
+      scriptPath,
+      '--input', ocrResultPath,
+      '--output-dir', outputDir,
+      '--mode', 'segment',
+      '--model-structure', modelStructurePath
+    ], {
+      cwd: PYTHON_DIR,
+      env: { ...process.env }
+    });
+
+    let stdout = '';
+    let stderr = '';
+    let timedOut = false;
+
+    const timeout = setTimeout(() => {
+      timedOut = true;
+      console.error('[Segment Bridge] TIMEOUT: Segmentation exceeded 5 minutes');
+      proc.kill('SIGKILL');
+    }, MODEL_PROC_TIMEOUT_MS);
+
+    proc.stdout.on('data', (data) => {
+      stdout += data.toString();
+    });
+
+    proc.stderr.on('data', (data) => {
+      stderr += data.toString();
+      console.log('[Segment Python]', data.toString().trim());
+    });
+
+    proc.on('close', (code) => {
+      clearTimeout(timeout);
+
+      if (timedOut) {
+        reject(new Error('Segmentation timed out'));
+        return;
+      }
+
+      console.log('[Segment Bridge] Process exited with code:', code);
+
+      if (!stdout.trim()) {
+        reject(new Error('Segmentation produced no output'));
+        return;
+      }
+
+      try {
+        const result = JSON.parse(stdout.trim());
+        if (result.error) {
+          reject(new Error(result.error));
+          return;
+        }
+
+        console.log('[Segment Bridge] Segmentation complete');
+        const summary = result.alignment?.summary;
+        if (summary) {
+          console.log(`[Segment Bridge] Matched: ${summary.matched_questions}/${summary.total_questions}`);
+          console.log(`[Segment Bridge] Confidence: ${summary.overall_confidence}`);
+        }
+
+        resolve(result);
+      } catch (e) {
+        reject(new Error(`Failed to parse segmentation output: ${stdout.substring(0, 500)}`));
+      }
+    });
+
+    proc.on('error', (err) => {
+      clearTimeout(timeout);
+      reject(new Error(`Failed to start segmentation process: ${err.message}`));
+    });
+  });
+}
+
+
+module.exports = { runOCR, runGrader, runSegmentation };
+

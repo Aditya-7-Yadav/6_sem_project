@@ -23,10 +23,25 @@ const evalSetSchema = new mongoose.Schema({
     questionNumber: String,
     modelAnswer: String,
     maxMarks: Number,
-    type: { type: String, enum: ['short', 'long'] }
-  }]
+    type: { type: String, enum: ['short', 'long'] },
+    // Enhanced fields for multimodal evaluation
+    contentTypes: { type: [String], default: ['text'] },   // ['text', 'diagram', 'numerical', 'theorem']
+    keywords: { type: [String], default: [] },              // extracted key concepts
+    diagramData: { type: mongoose.Schema.Types.Mixed, default: null },  // structured diagram description
+    mathExpressions: { type: [String], default: [] }        // expected math expressions
+  }],
+  // Model answer structure metadata
+  modelStructure: {
+    type: mongoose.Schema.Types.Mixed,
+    default: null
+  },
+  processingMode: {
+    type: String,
+    default: 'regex'   // 'regex' | 'gemini' | 'gemini_vision'
+  }
 }, {
   timestamps: true
 });
 
 module.exports = mongoose.model('EvalSet', evalSetSchema);
+

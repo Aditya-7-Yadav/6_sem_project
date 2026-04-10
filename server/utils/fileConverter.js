@@ -1,5 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
+
+const PYTHON_DIR = path.join(__dirname, '..', '..', 'python');
+const PYTHON_PATH = process.env.PYTHON_PATH || 'python';
 
 /**
  * Parse model answer text into structured question objects.
@@ -44,7 +48,12 @@ function parseModelAnswerText(text) {
       questionNumber: current.questionNumber,
       modelAnswer: answerText,
       maxMarks: current.maxMarks,
-      type: type
+      type: type,
+      // Default multimodal fields
+      contentTypes: ['text'],
+      keywords: [],
+      diagramData: null,
+      mathExpressions: []
     });
   }
 
@@ -53,7 +62,133 @@ function parseModelAnswerText(text) {
 
 
 /**
- * Read and parse a model answer file (TXT or extract text from simple PDF).
+ * Process a PDF model answer through the enhanced Python pipeline.
+ * Uses Gemini Vision to extract structured content including diagrams, math, keywords.
+ * 
+ * @param {string} filePath - Path to the PDF file
+ * @returns {Promise<Array>} - Array of enriched question objects
+ */
+function parseModelAnswerPDF(filePath) {
+  return new Promise((resolve, reject) => {
+    const scriptPath = path.join(PYTHON_DIR, 'ocr', 'enhanced_ocr_pipeline.py');
+    const outputDir = path.join(
+      path.dirname(filePath),
+      `model_processing_${Date.now()}`
+    );
+
+    fs.mkdirSync(outputDir, { recursive: true });
+
+    console.log('[FileConverter] Processing PDF model answer with enhanced pipeline');
+    console.log('[FileConverter] Script:', scriptPath);
+    console.log('[FileConverter] Input:', filePath);
+    console.log('[FileConverter] Output dir:', outputDir);
+
+    const proc = spawn(PYTHON_PATH, [
+      scriptPath,
+      '--input', filePath,
+      '--output-dir', outputDir,
+      '--mode', 'model-answer',
+      '--legacy'
+    ], {
+      cwd: PYTHON_DIR,
+      env: { ...process.env }
+    });
+
+    let stdout = '';
+    let stderr = '';
+
+    const timeout = setTimeout(() => {
+      console.error('[FileConverter] TIMEOUT: Model answer processing exceeded 5 minutes');
+      proc.kill('SIGKILL');
+    }, 300_000);
+
+    proc.stdout.on('data', (data) => {
+      stdout += data.toString();
+    });
+
+    proc.stderr.on('data', (data) => {
+      stderr += data.toString();
+      console.log('[FileConverter Python]', data.toString().trim());
+    });
+
+    proc.on('close', (code) => {
+      clearTimeout(timeout);
+
+      console.log('[FileConverter] Process exited with code:', code);
+
+      if (!stdout.trim()) {
+        // If Python processing failed, fall back to pdf-parse
+        console.log('[FileConverter] Python processing produced no output, falling back to pdf-parse');
+        parseModelAnswerPDFFallback(filePath)
+          .then(resolve)
+          .catch(reject);
+        return;
+      }
+
+      try {
+        const result = JSON.parse(stdout.trim());
+
+        if (result.error) {
+          console.error('[FileConverter] Python returned error:', result.error);
+          // Fall back to pdf-parse
+          parseModelAnswerPDFFallback(filePath)
+            .then(resolve)
+            .catch(reject);
+          return;
+        }
+
+        // Result is in legacy format (array of question objects)
+        if (Array.isArray(result)) {
+          console.log(`[FileConverter] Enhanced processing extracted ${result.length} questions`);
+          resolve(result);
+        } else {
+          console.warn('[FileConverter] Unexpected result format, falling back to pdf-parse');
+          parseModelAnswerPDFFallback(filePath)
+            .then(resolve)
+            .catch(reject);
+        }
+
+      } catch (e) {
+        console.error('[FileConverter] Failed to parse Python output:', e.message);
+        parseModelAnswerPDFFallback(filePath)
+          .then(resolve)
+          .catch(reject);
+      }
+    });
+
+    proc.on('error', (err) => {
+      clearTimeout(timeout);
+      console.error('[FileConverter] Failed to start Python process:', err.message);
+      // Fall back to pdf-parse
+      parseModelAnswerPDFFallback(filePath)
+        .then(resolve)
+        .catch(reject);
+    });
+  });
+}
+
+
+/**
+ * PDF fallback: extract text using pdf-parse and apply regex parsing.
+ * This is the original behavior for PDF model answers.
+ */
+async function parseModelAnswerPDFFallback(filePath) {
+  try {
+    const pdfParse = require('pdf-parse');
+    const buffer = fs.readFileSync(filePath);
+    const data = await pdfParse(buffer);
+    console.log(`[FileConverter] pdf-parse fallback extracted ${data.text.length} chars`);
+    return parseModelAnswerText(data.text);
+  } catch (err) {
+    throw new Error(`Failed to parse PDF model answer: ${err.message}`);
+  }
+}
+
+
+/**
+ * Read and parse a model answer file.
+ * - .txt: regex-based parsing (original behavior)
+ * - .pdf: enhanced Python pipeline with Gemini Vision, fallback to pdf-parse
  */
 async function parseModelAnswerFile(filePath) {
   const ext = path.extname(filePath).toLowerCase();
@@ -65,12 +200,12 @@ async function parseModelAnswerFile(filePath) {
 
   if (ext === '.pdf') {
     try {
-      const pdfParse = require('pdf-parse');
-      const buffer = fs.readFileSync(filePath);
-      const data = await pdfParse(buffer);
-      return parseModelAnswerText(data.text);
+      // Try enhanced processing first (Gemini Vision for diagrams, math, etc.)
+      return await parseModelAnswerPDF(filePath);
     } catch (err) {
-      throw new Error(`Failed to parse PDF model answer: ${err.message}`);
+      console.error('[FileConverter] Enhanced PDF processing failed:', err.message);
+      // Fall back to basic pdf-parse
+      return await parseModelAnswerPDFFallback(filePath);
     }
   }
 
@@ -90,4 +225,5 @@ function getFileType(filePath) {
 }
 
 
-module.exports = { parseModelAnswerText, parseModelAnswerFile, getFileType };
+module.exports = { parseModelAnswerText, parseModelAnswerFile, parseModelAnswerPDF, getFileType };
+

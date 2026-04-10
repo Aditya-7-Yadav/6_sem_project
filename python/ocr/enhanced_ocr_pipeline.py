@@ -61,7 +61,7 @@ from ocr_service import (
 )
 
 # --------------- Import new Gemini modules ---------------
-from ocr.gemini_client import log, GEMINI_AVAILABLE, gemini_analyze_image
+from ocr.gemini_client import log, GEMINI_AVAILABLE, gemini_analyze_image, ai_correct_ocr_text
 from ocr.gemini_first_page_extractor import extract_student_info
 from ocr.content_classifier import classify_page_content, get_content_type_summary
 from ocr.hybrid_extractor import merge_page_results, merge_all_pages
@@ -483,6 +483,15 @@ def process_pdf_file(pdf_path, out_dir):
     document_merge = merge_all_pages(page_merge_results)
     full_text = document_merge.get("full_text", "")
     
+    if GEMINI_AVAILABLE and full_text.strip():
+        try:
+            log_pipeline("Step 4.5: AI-assisted OCR semantic error correction...")
+            corrected_text = ai_correct_ocr_text(full_text)
+            full_text = corrected_text
+            document_merge["full_text"] = full_text
+        except Exception as e:
+            log_pipeline(f"OCR correction failed (using original text): {e}")
+
     log_pipeline(f"Answer text: {len(full_text)} chars (excluding cover page)")
 
     # Use enhanced extraction (regex first, then Gemini fallback)
@@ -544,6 +553,71 @@ def _fallback_pdf_direct(pdf_path, out_dir):
     }
 
 
+# ===================== MODEL ANSWER PROCESSING MODE =====================
+
+def process_model_answer_mode(input_path, out_dir, legacy=False):
+    """
+    Process a model answer file and output structured JSON.
+    Called when --mode model-answer is used.
+    """
+    from ocr.model_answer_processor import process_model_answer, to_legacy_format
+
+    log_pipeline(f"Mode: MODEL ANSWER PROCESSING")
+    result = process_model_answer(input_path, out_dir)
+
+    if legacy:
+        result = to_legacy_format(result)
+
+    return result
+
+
+# ===================== SEGMENTATION MODE =====================
+
+def process_segmentation_mode(student_ocr_json_path, model_structure_json_path):
+    """
+    Run segmentation + alignment on student OCR results using model structure.
+    Called when --mode segment is used.
+    """
+    from ocr.segmentation_engine import segment_student_answers
+    from ocr.alignment_engine import align_answers, to_grading_input
+
+    log_pipeline(f"Mode: SEGMENTATION + ALIGNMENT")
+
+    # Load student OCR result
+    with open(student_ocr_json_path, 'r', encoding='utf-8') as f:
+        student_ocr = json.load(f)
+
+    # Load model structure
+    with open(model_structure_json_path, 'r', encoding='utf-8') as f:
+        model_structure = json.load(f)
+
+    student_text = student_ocr.get("full_text", "")
+    student_structured = student_ocr.get("structured_answers", [])
+
+    # Step 1: Segment
+    segments = segment_student_answers(
+        student_text=student_text,
+        model_structure=model_structure,
+        student_structured=student_structured
+    )
+
+    # Step 2: Align
+    alignment = align_answers(segments, model_structure)
+
+    # Step 3: Convert to grading input format
+    grading_input = to_grading_input(alignment)
+
+    log_pipeline(f"Segmentation complete: {alignment['summary']['matched_questions']}/"
+                 f"{alignment['summary']['total_questions']} questions matched, "
+                 f"confidence={alignment['summary']['overall_confidence']:.3f}")
+
+    return {
+        "segments": segments,
+        "alignment": alignment,
+        "grading_input": grading_input
+    }
+
+
 # ===================== ENTRY POINT =====================
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -551,6 +625,13 @@ if __name__ == "__main__":
     )
     parser.add_argument("--input", required=True, help="Path to PDF or image file")
     parser.add_argument("--output-dir", required=True, help="Directory for output files")
+    parser.add_argument("--mode", default="ocr",
+                        choices=["ocr", "model-answer", "segment"],
+                        help="Processing mode: ocr (default), model-answer, segment")
+    parser.add_argument("--model-structure", default=None,
+                        help="Path to model structure JSON (required for segment mode)")
+    parser.add_argument("--legacy", action="store_true",
+                        help="Output in legacy format (for model-answer mode)")
     args = parser.parse_args()
 
     input_path = os.path.abspath(args.input)
@@ -559,6 +640,7 @@ if __name__ == "__main__":
 
     log_pipeline(f"Input: {input_path}")
     log_pipeline(f"Output dir: {out_dir}")
+    log_pipeline(f"Mode: {args.mode}")
     log_pipeline(f"File type: {ext}")
     log_pipeline(f"Gemini available: {GEMINI_AVAILABLE}")
     log_pipeline(f"File exists: {os.path.exists(input_path)}")
@@ -572,12 +654,27 @@ if __name__ == "__main__":
     log_pipeline(f"File size: {file_size} bytes ({file_size / 1024:.1f} KB)")
 
     try:
-        if ext == ".pdf":
-            result = process_pdf_file(input_path, out_dir)
-        elif ext in [".jpg", ".jpeg", ".png", ".bmp", ".tiff"]:
-            result = process_image_file(input_path, out_dir)
+        # ---- MODE: Model Answer Processing ----
+        if args.mode == "model-answer":
+            result = process_model_answer_mode(input_path, out_dir, legacy=args.legacy)
+
+        # ---- MODE: Segmentation + Alignment ----
+        elif args.mode == "segment":
+            if not args.model_structure:
+                result = {"error": "--model-structure is required for segment mode"}
+            elif not os.path.exists(args.model_structure):
+                result = {"error": f"Model structure file not found: {args.model_structure}"}
+            else:
+                result = process_segmentation_mode(input_path, args.model_structure)
+
+        # ---- MODE: Student OCR (default, existing behavior) ----
         else:
-            result = {"error": f"Unsupported file type: {ext}"}
+            if ext == ".pdf":
+                result = process_pdf_file(input_path, out_dir)
+            elif ext in [".jpg", ".jpeg", ".png", ".bmp", ".tiff"]:
+                result = process_image_file(input_path, out_dir)
+            else:
+                result = {"error": f"Unsupported file type: {ext}"}
 
         # Write result JSON to file
         result_path = os.path.join(out_dir, "ocr_result.json")
@@ -585,8 +682,8 @@ if __name__ == "__main__":
             json.dump(result, f, indent=2, ensure_ascii=False)
         log_pipeline(f"Result written to: {result_path}")
 
-        # Summary
-        if "error" not in result:
+        # Summary (for OCR mode)
+        if "error" not in result and args.mode == "ocr":
             log_pipeline(f"Full text: {len(result.get('full_text', ''))} chars")
             log_pipeline(f"Answers: {len(result.get('structured_answers', []))}")
             log_pipeline(f"Student: {result.get('student_info', {}).get('name', 'N/A')}")

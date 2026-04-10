@@ -9,7 +9,13 @@ const questionResultSchema = new mongoose.Schema({
   marksAwarded: Number,
   finalScore: Number,
   details: mongoose.Schema.Types.Mixed,
-  feedback: String
+  feedback: String,
+  // Enhanced multimodal fields
+  contentTypes: { type: [String], default: ['text'] },
+  diagramScore: { type: Number, default: null },
+  mathScore: { type: Number, default: null },
+  alignmentConfidence: { type: Number, default: null },
+  contentTypesEvaluated: { type: [String], default: [] }
 }, { _id: false });
 
 const resultSchema = new mongoose.Schema({
@@ -44,9 +50,19 @@ const resultSchema = new mongoose.Schema({
   percentage: {
     type: Number,
     default: 0
+  },
+  // Pipeline metadata
+  pipelineMode: {
+    type: String,
+    default: 'legacy'  // 'legacy' | 'enhanced' | 'multimodal'
+  },
+  alignmentSummary: {
+    type: mongoose.Schema.Types.Mixed,
+    default: null
   }
 }, {
   timestamps: true
 });
 
 module.exports = mongoose.model('Result', resultSchema);
+
